@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="/lib/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/regular.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./mystyle/product.css">
+    <script src="/lib/jquery/jquery-3.6.4.min.js"></script>
+    <!-- <script src="/lib/bootstrap/js/popper.min.js"></script> -->
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./myjs/localstore.js"></script>
+    <script src="./myjs/addcard.js"></script>
+</head>
+<body>
+    <header class = "head-button">
+        <a class="backbutton" href="../home/index.html">
+            <i class="fa-solid fa-arrow-left backicon"></i>
+            Quay về
+        </a>
+    </header>
+      
+    <div class="controls">
+        <button id="btn-add-product" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-add-new-product"><i class="fa-solid fa-plus"></i> Thêm mới</button>
+    </div>
+    <div class="product-list"></div>
+
+    <div class="modal fade" id="modal-add-new-product" tabindex="-1"  aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-title">Thêm mới sản phẩm</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color: #f9f8fb;">
+                <form id="form-add-product" action="" method="post">
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Tên khách hàng</label>
+                        <input class="form-control" type="text" name="name" id="clientname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Mã thẻ</label>
+                        <input class="form-control" type="number" name="code" id="code">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Ảnh</label>
+                        <div class="img-preview">
+                            <label id="image-preview" for="select-image" class="image-preview-wrap">
+                                <div id="label-content">
+                                    <div style="display: flex;align-items: center;">
+                                        <i class="fa-solid fa-image" style="font-size: 2em;color: #999;"></i>
+                                    </div>
+                                    <span style="font-size: 1em;font-weight: 500;color: #a5a5a5;">Chọn hoặc kéo thả ảnh vào đây</span>
+                                </div>
+                            </label>
+                        </div>
+                        <input class="form-control" type="file" id="select-image" name="picture" hidden>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+              <button id="btn-savecard" type="button" class="btn btn-primary ps-5 pe-5">Lưu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

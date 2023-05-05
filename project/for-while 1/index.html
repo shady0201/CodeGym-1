@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/lib/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/regular.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a class="head-wrap" href="../../index.html">
+            <div class = "head-img">
+            <img src="https://codegym.vn/wp-content/uploads/2021/08/CodeGym-Logo.webp" alt="CodeGym Hà Nội" id="logo" >
+            </div>
+        </a>
+        <div class = "head-button">
+        <a class="backbutton" href="../../index.html">
+            <i class="fa-solid fa-arrow-left backicon"></i>
+            Quay về
+        </a>
+        <p style="font-size: xx-large;color:crimson;">For While 01</p>
+        <a class="backbutton" href="../for-while 2/index.html">
+            Tiếp
+            <i class="fa-solid fa-arrow-right backicon"></i>
+        </a>
+        </div>
+    </header>
+    <div class="bt">
+        <p>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</p>
+        <button onclick="run('bt1')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt1"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</p>
+        <button onclick="run('bt2')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt2"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</p>
+        <button onclick="run('bt3')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt3"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</p>
+        <button onclick="run('bt4')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt4"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</p>
+        <button onclick="run('bt5')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt5"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</p>
+        <button onclick="run('bt6')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt6"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</p>
+        <button onclick="run('bt7')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt7"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 8: Game đoán số.</p>
+        <button onclick="run('bt8')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt8"></p>
+    </div>    
+
+    <script src="bt.js"></script>
+    <script src="../../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

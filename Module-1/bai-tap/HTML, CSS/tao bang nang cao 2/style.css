@@ -1,0 +1,35 @@
+body{
+    font-family: "padding:20px";
+}
+
+thead{
+    color:white;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th{
+    border-color: white;
+}
+
+td{ 
+    border: 3px solid #e0e0e0; 
+}
+
+.day{
+    border:none;
+}
+
+
+
+
+
+
+

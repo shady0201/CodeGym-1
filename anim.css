@@ -1,0 +1,124 @@
+.ring{
+    animation-name: ring;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.beat{
+    animation-name: beat;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.rotate{
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.bounce{
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.ring-beat {
+    animation-name: ring-beat;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ring {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(-20deg);
+    }
+
+    100%{
+        transform: rotate(20deg);
+    }
+}
+
+
+@keyframes beat {
+    0%{
+        scale: 1.0;
+    }
+
+    50%{
+        scale: 1.2;
+    }
+
+    100%{
+        scale: 1.0;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(-40px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        scale: 1.0; 
+    }
+  
+    50% {
+        scale: 1.2;
+    }
+  
+    100% {
+        scale: 1.0;
+    }
+  }
+
+
+@keyframes ring-beat {
+    0%{
+        transform: rotate(0deg);
+        scale: 1.0;
+    }
+
+    50%{
+        transform: rotate(-20deg);
+        scale: 1.2;
+    }
+
+    100%{
+        transform: rotate(20deg);
+        scale: 1.1;
+    }
+}

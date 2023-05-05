@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/lib/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/regular.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>    
+        <a class="head-wrap" href="../../index.html">
+            <div class = "head-img">
+                <img src="https://codegym.vn/wp-content/uploads/2021/08/CodeGym-Logo.webp" alt="CodeGym Hà Nội" id="logo" >
+            </div>        
+        </a>
+        <div class = "head-button">
+        <a class="backbutton" href="../for-while 2/index.html">
+            <i class="fa-solid fa-arrow-left backicon"></i>
+            Quay về
+        </a>
+        <p style="font-size: xx-large;color:crimson;margin-right: 35px;">For Condition</p>
+        <a></a> 
+        </div>
+    </header>
+    <div class="bt">
+        <p>Bài 1: Nhập a, in a ra thẻ h2.</p>
+        <input class="result" type="text" id="nhapA" placeholder="Type sth"><br>
+        <button onclick="run('bt1')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt1"></p> 
+    </div>
+    <div class="bt">
+        <p>Bài 2: Nhập đường dẫn ảnh, hiện ảnh.</p>
+        <input class="result" type="text" id="nhapImg" placeholder="Nhập đường dẫn ảnh"><br>
+        <button onclick="run('bt2')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt2"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 3: Nhập đường dẫn facebook, nhập tên nick. Hiện tên nick ra màn hình, ấn vào chuyển sang trang facebook</p>
+        <input class="result" type="text" id="nhapF" placeholder="Nhập đường link FB"><br>
+        <input class="result" type="text" id="nhapNick" placeholder="Nhập tên"><br>
+        <button onclick="run('bt3')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt3"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 4: Nhập a là tuổi, nếu a > 100, in ra "Trường Thọ".</p><input class="result" type="text" id="nhapTuoi" placeholder="Nhập tuổi"> <br>
+        <button onclick="run('bt4')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt4"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 5: Nhập a là điểm thi : a = 10 in ra "Xuất sắc", a >= 8 in ra "Giỏi", a >= 5 in ra "Khá", nếu a < 5 in ra "Yếu"</p>
+        </p><input class="result" type="number" id="diem" placeholder="Nhập điểm thi"> <br>
+        <button onclick="run('bt5')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt5"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 6: Nhập a là một chuỗi, in ra 20 lần</p>
+        </p><input class="result" type="text" id="chuoiA" placeholder="Nhập a"> <br>
+        <button onclick="run('bt6')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt6"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 7: Nhập a là đường dẫn ảnh. In ra 20 ảnh có nguồn a.</p>
+        </p><input class="result" type="text" id="nhapAnh" placeholder="Nhập đường dẫn ảnh"> <br>
+        <button onclick="run('bt7')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt7"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 8: Nhập a là đường dẫn ảnh, b là số lượng ảnh cần in. In ra b ảnh có nguồn là a</p>
+        </p><input class="result" type="text" id="danAnh" placeholder="Nhập đường dẫn ảnh"> <br>    
+        </p><input class="result" type="text" id="soLuong" placeholder="Nhập số lượng muốn in"> <br>
+        <button onclick="run('bt8')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt8"></p>
+    </div>      
+    <div class="bt">
+        <p>Bài 9: Nhập a, b. In ra các số chia 7 dư 4 từ a->b. Tính tổng các số chia hết cho 5 từ a->b. Đếm các số chia 7 dư 4. Nếu a>b: in ra tích a*b, nếu b>a: in ra tích từ a->b. Tính tổng bình phương các số từ a->b. In ra các số chính phương từ a->b</p>
+        </p><input class="result" type="number" id="inputA" placeholder="Nhập A"><br>    
+        </p><input class="result" type="number" id="inputB" placeholder="Nhập B"><br>
+        <button onclick="run('bt9')" type="button" class="btn btn-primary">Chạy</button>
+        <div class="result-bt" id="bt9"></div> 
+    </div>
+    <div class="bt">
+        <p>Bài 10: Nhập vào n. Tính 
+            S = 100 +1/3 + 1/2 + 3/5 + … + n*(n + 1)/ (n+1)*(n + 2)</p>
+        </p><input class="result" type="number" id="inputN" placeholder="Nhập N"><br>
+        <button onclick="run('bt10')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result-bt" id="bt10"></p>  
+    </div>  
+    <script src="bt.js"></script>
+    <script src="../../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

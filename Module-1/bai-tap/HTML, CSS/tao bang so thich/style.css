@@ -1,0 +1,46 @@
+body{
+    background-color: aquamarine;
+}
+
+.all{
+    margin-left: 80px;
+}
+.input-group{
+    display: flex;
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.input-group label{
+    width: 20%;
+}
+
+.input-hobby{
+    margin-top: 5px;
+    color: orange;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+   
+}
+
+.hobby-1{
+    margin-left:70px;
+}
+
+.hobby-2{
+    margin-left:70px;
+}
+
+label{
+    color: blue;
+}
+
+.checkbox-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+}
+.checkbox-group{
+    margin-right: 30px;
+}

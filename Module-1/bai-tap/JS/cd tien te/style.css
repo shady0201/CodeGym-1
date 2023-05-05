@@ -1,0 +1,19 @@
+.info{
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 20px;
+}
+
+::placeholder{
+    font-style: italic;
+    text-align: left;
+}
+table{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.convert{
+    background-color:rgb(27, 143, 143);
+    color: white;
+    font-weight: bolder;  
+}

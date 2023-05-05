@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/lib/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/regular.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a class="head-wrap" href="../../index.html">
+            <div class = "head-img">
+                <img src="https://codegym.vn/wp-content/uploads/2021/08/CodeGym-Logo.webp" alt="CodeGym Hà Nội" id="logo" >
+            </div>        
+        </a>
+        <div class = "head-button">
+        <a class="backbutton" href="../if condition 1/index.html">
+            <i class="fa-solid fa-arrow-left backicon"></i>
+            Quay về
+        </a>
+        <p style="font-size: xx-large;color:crimson;">If Condition 02</p>
+        <a></a> 
+        </div>
+    </header>
+    <div class="bt">
+        <p>Bài 1: Chuyển từ độ C sang độ F : 
+            °C  x  9/5 + 32 = °F"</p>
+        <button onclick="run('bt1')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt1"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 2: Chuyển từ mét sang feet : 
+             ft = m * 3.2808</p>
+        <button onclick="run('bt2')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt2"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</p>
+        <button onclick="run('bt3')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt3"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</p>
+        <button onclick="run('bt4')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt4"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</p>
+        <button onclick="run('bt5')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt5"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 6: Giải phương trình bậc 1.</p>
+        <button onclick="run('bt6')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt6"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 7: Giải phương trình bậc 2.</p>
+        <button onclick="run('bt7')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt7"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</p>
+        <button onclick="run('bt8')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt8"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+            "a,b,c > 0;
+            a + b > c;
+            b + c > a;
+            a + c > b"</p>
+        <button onclick="run('bt9')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt9"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 10: Viết chương trình tính giá điện.</p>
+        <button onclick="run('bt10')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt10"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</p>
+        <button onclick="run('bt11')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt11"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</p>
+        <button onclick="run('bt12')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="bt12"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 13: Tính chỉ số cân nặng của cơ thể</p>
+        <input class="chiso" type="text" placeholder="Nhập số cân nặng (kg)" id="canNang"><br>
+        <input class="chiso" type="text" placeholder="Nhập chiều cao (m)" id="chieuCao"><br><br>
+        <button onclick="run('bt13')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="ketqua"></p>
+    </div>
+
+    <div class="bt">
+        <p>Bài: Switch Case</p>
+        <button onclick="run('btSwitch')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result" id="ketquaSwitch"></p>
+    </div>
+    <script src="bt.js"></script>
+    <script src="../../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

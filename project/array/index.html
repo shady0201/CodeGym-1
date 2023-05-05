@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/lib/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="/lib/fontawesome/css/regular.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a class="head-wrap" href="../../index.html">
+            <div class = "head-img">
+            <img src="https://codegym.vn/wp-content/uploads/2021/08/CodeGym-Logo.webp" alt="CodeGym Hà Nội" id="logo" >
+            </div>
+        </a>
+        <div class = "head-button">
+        <a class="backbutton" href="../../index.html">
+            <i class="fa-solid fa-arrow-left backicon"></i>
+            Quay về
+        </a>
+        <p style="font-size: xx-large;color:crimson;">Array</p>
+        <a class="backbutton" href="">
+        </a>
+        </div>
+    </header>
+    <div class="bt">
+        <p>Bài 1: In ra các phần tử trong mảng.</p>
+        <input class="result" type="text" id ="inputArr1" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt1')" type="button" class="btn btn-primary" >Chạy</button>
+        <p class="result return" id="bt1"></p>
+        <p class="result" id="kq1"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 2: In ra các phần tử chẵn trong mảng.</p>
+        <input class="result" type="text" id ="inputArr2" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt2')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt2"></p>
+        <p class="result" id="kq2"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 3: In ra các mảng a và b, số chẵn trong h2, lẻ trong h1;.</p>
+        <input class="result" type="text" id ="inputA" placeholder="Nhập mảng A"><br>
+        <input class="result" type="text" id ="inputB" placeholder="Nhập mảng B"><br>
+        <button onclick="run('bt3')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt3"></p>
+        <p class="result" id="kq3-chan"></p>
+        <p class="result" id="kq3-le"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 4: Tính tích các phần tử trong mảng.</p>
+        <input class="result" type="text" id ="inputA-4" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt4')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt4"></p>
+        <p class="result" id="kq4"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 5: Tính tổng các phần tử trong mảng.</p>
+        <input class="result" type="text" id ="inputA-5" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt5')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt5"></p>
+        <p class="result" id="kq5"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 6: Nhập vào mảng, đếm số lượng trong mảng</p>
+        <input class="result" type="text" id ="inputA-6" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt6')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt6"></p>
+        <p class="result" id="kq6"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 7: Tìm số max và vị trí số max trong mảng.</p>
+        <input class="result" type="text" id ="inputA-7" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt7')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt7"></p>
+        <p class="result" id="kq7-max"></p>
+        <p class="result" id="kq7-maxindex"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 8: Tìm số a trong vị trí mảng.</p>
+        <input class="result" type="text" id ="inputNum" placeholder="Nhập số a"><br>
+        <input class="result" type="text" id ="inputA-8" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt8')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt8"></p>
+        <p class="result" id="kq8-index"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 9: Tìm số max thứ 2 trong mảng.</p>
+        <input class="result" type="text" id ="inputA-9" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt9')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt9"></p>
+        <p class="result" id="kq9"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 10: Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.</p>
+        <input class="result" value = "1,2,5,9,4,6,12,23,69,99" type="text" id ="inputArr-10" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt10')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt10"></p>
+        <p class="result" id="kq10"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 11: Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</p>
+        <input class="result" value = "1,99,5,9,4,6,12,23,69,99" type="text" id ="inputArr-11" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt11')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt11"></p>
+        <p class="result" id="kq11-max"></p>
+        <p class="result" id="kq11-viTriMax"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 12: Viết chương trình khởi tạo mảng số nguyên. Hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</p>
+        <input class="result" type="text" id ="inputArr-12" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt12')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt12"></p>
+        <p class="result" id="kq12-max"></p>
+        <p class="result" id="kq12-tb"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 13: Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</p>
+        <input class="result" type="text" id ="inputArr-13" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt13')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt13"></p>
+        <p class="result" id="kq13"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 14: Viết chương trình đếm số nguyên âm trong một chuỗi.</p>
+        <input class="result" type="text" id ="inputArr-14" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt14')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt14"></p>
+        <p class="result" id="kq14"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 15: Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</p>
+        <input class="result" value="1,3,5,7,9,2,4,12,34,21" type="text" id ="inputArr-15" placeholder="Nhập mảng"><br>
+        <input class="result" type="text" id ="inputV" placeholder="Nhập số"><br>
+        <button onclick="run('bt15')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt15"></p>
+        <p class="result" id="kq15"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 16: Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng).</p>
+        <input class="result" value="1,3,5,7,9,2,4,3,12,34,21" type="text" id ="inputArr-16" placeholder="Nhập mảng"><br>
+        <input class="result" type="text" id ="inputV16" placeholder="Nhập số"><br>
+        <button onclick="run('bt16')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt16"></p>
+        <p class="result" id="kq16"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 17: Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</p>
+        <input class="result" value="1,3,5,7,9,2,4,12,34,21" type="text" id ="inputArr-17" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt17')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt17"></p>
+        <p class="result" id="kq17-ab"></p>
+        <p class="result" id="kq17-ba"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 18: Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</p>
+        <input class="result" value="1,3,5,7,9,2,4,12,34,21" type="text" id ="inputArrA-18" placeholder="Nhập mảng"><br>
+        <input class="result" value="4,5,8,1,2,23,60,12,32,9" type="text" id ="inputArrB-18" placeholder="Nhập mảng"><br>
+        <input class="result" value="50,51,52,53,54,55,56,57" type="text" id ="inputArrC-18" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt18')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt18"></p>
+        <p class="result" id="kq18"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 21: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng. Chú ý: Sử dụng vòng lặp for lồng nhau.</p>
+        <button onclick="run('bt21')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt21"></p>
+        <p class="result" id="kq21-1"></p>
+        <p class="result" id="kq21-2"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 22: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc".</p>
+        <input class="result" type="text" id ="input22" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt22')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt22"></p>
+        <p class="result" id="kq22"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 23: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự SỐ trong mảng.</p>
+        <input class="result" type="text" id ="input23" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt23')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt23"></p>
+        <p class="result" id="kq23"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 24: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</p>
+        <input class="result" type="text" id ="input24-A" placeholder="Nhập mảng A"><br>
+        <input class="result" type="text" id ="input24-B" placeholder="Nhập mảng B"><br>
+        <button onclick="run('bt24')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt24"></p>
+        <p class="result" id="kq24"></p>
+    </div>
+    <div class="bt">
+        <p>Bài 25: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</p>
+        <input class="result" type="text" id ="input25" placeholder="Nhập mảng"><br>
+        <button onclick="run('bt25')" type="button" class="btn btn-primary">Chạy</button>
+        <p class="result return" id="bt25"></p>
+        <p class="result" id="kq25"></p>
+    </div>
+    <script src="bt.js"></script>
+    <script src="../../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

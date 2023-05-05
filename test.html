@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    
+</head>
+<body>
+  <input type="text" pattern="\d{4}-\d{4}-\d{4}-\d{4}" />
+  </style>
+    
+    <script>
+    const input = document.querySelector('input');
+      const pattern = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+      
+      input.addEventListener('input', () => {
+        if (!pattern.test(input.value)) {
+          input.setCustomValidity('Số không hợp lệ. Vui lòng nhập số theo định dạng 1234-5678-9012-3456.');
+        } else {
+          input.setCustomValidity('');
+        }
+      });</script>
+    <script src="test.js"></script>
+</body>
+</html>

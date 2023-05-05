@@ -1,0 +1,10 @@
+git init
+git add README.md // them 1 file
+git add . // add tat ca thu muc+file (mỗi lần thay đổi)
+git commit -m "first (type) commit" (mỗi lần thay đổi)
+git remote add origin https://github.com/Cass81097/Module-1 // lien ket duong dan may tinh toi github
+git push -u origin master // chuyen file len github
+
+git commit -m "add style folder"
+
+https://github.com/Cass81097

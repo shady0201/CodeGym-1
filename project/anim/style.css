@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.head-wrap{
+    display: flex;
+    margin: 10px;
+    max-width: auto;
+    text-align: left;
+    background-color: #282781;
+    text-decoration: none;
+}
+
+.head-img{
+    margin-bottom: -5px;
+    height: 55px;
+}
+
+.head-button{
+    margin-bottom: -10px;
+}
+
+.backbutton{
+    font-size: 18px;
+    color: blue; 
+    text-decoration: none;  
+    padding-left: 10px;
+}
+
+.backicon{
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.button-Ball{
+    text-align: center;   
+}
+
+.button-Ball button{
+    background-color: wheat;
+    cursor: pointer;
+}

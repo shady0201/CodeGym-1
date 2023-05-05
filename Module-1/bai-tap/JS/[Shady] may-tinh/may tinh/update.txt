@@ -1,0 +1,7 @@
+11/04/2023
+- Thêm icon cho các button từ thư viện font-awesome
+- Chỉnh sửa style: bo viền, kích thước, chia grid, đổ bóng,font chữ, background, hover effect ...
+- Tự động thực hiện phép tính mới sau khi: tính xong 1 phép tính và tiếp tục nhấn nút số
+- Thêm co dãn kích thước input lớn khi độ dài vượt quá view
+- Sửa lại button đổi dấu.
+- Thêm giá trị mặc định input là 0

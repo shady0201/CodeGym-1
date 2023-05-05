@@ -1,0 +1,8 @@
+.input-group{
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+}
+.input-group label{
+    width: 10%;
+}

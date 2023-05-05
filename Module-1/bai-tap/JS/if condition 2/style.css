@@ -1,0 +1,16 @@
+.bt{
+    padding: 50px; 
+    border: 1px solid;
+    margin-bottom: 50px; 
+    background-color: rgb(244, 233, 218);
+}
+ 
+p{
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#canNang{
+    margin-bottom: 10px;
+}

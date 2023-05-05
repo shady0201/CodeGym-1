@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyen doi tien te</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="info">
+    <table border = 0, style="width: 500px;height: 20px;">
+    <tbody>
+        <tr>    
+        <th><label>Amount</label></th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>   
+        </tr>
+     
+        <tr>
+            <td><input type="text" id="Amount" placeholder="1$ = 23.400 VND" size="20"></td>
+           <td>
+                <select id="From">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+                </select>
+            </td>
+    
+            <td>
+                <select id="To">       
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                </select>
+            </td>
+          
+        
+            <td><button class = "convert" onclick="changeMoney()">Convert</button></td>
+        </tr>
+    </tbody>
+    </table>  
+        <p style = "color: blue; font-size:larger"; id="Result">Kết quả : </p>  
+</div>
+<script src="index.js"></script>
+</body>
+</html>

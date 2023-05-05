@@ -1,0 +1,40 @@
+body{
+    background-color: antiquewhite;
+}
+.info{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:25px;
+}
+
+.name{
+    color:blue;
+    font-weight:bold;
+}
+
+.exercise{
+    color:brown;
+    font-weight:bold;
+}
+
+.list{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-indent:10px;
+    list-style-type:disc;
+}
+
+.national{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.citylist{
+    padding-left:60px;
+    font-weight:550;
+    font-size:20px;
+}
+
+.title{
+    font-size:40px;
+    color:coral;
+}
+
