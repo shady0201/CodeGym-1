@@ -6,11 +6,11 @@ $( document ).ready(function() {   // == document.addEventListener('DOMContentLo
        let clientName = document.getElementById('clientname').value;
        const formattedClientName = clientName.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); 
        const upperCaseFormattedClientName = formattedClientName.toUpperCase();
-       let codePart1 = document.getElementById('code-part1').value.trim().padEnd(4, ' ');
-       let codePart2 = document.getElementById('code-part2').value.trim().padEnd(4, ' ');
-       let codePart3 = document.getElementById('code-part3').value.trim().padEnd(4, ' ');
-       let codePart4 = document.getElementById('code-part4').value.trim().padEnd(4, ' ');
-       code = codePart1 + ' ' + codePart2 + ' ' + codePart3 + ' ' + codePart4;
+       let codePart1 = document.getElementById('code-part1').value.trim()
+       let codePart2 = document.getElementById('code-part2').value.trim()
+       let codePart3 = document.getElementById('code-part3').value.trim()
+       let codePart4 = document.getElementById('code-part4').value.trim()
+       code = codePart1 + codePart2 + codePart3 + codePart4;
        addCard(upperCaseFormattedClientName, code);
     })
 });
@@ -27,6 +27,11 @@ function addCard(name, code){
         return; 
     }
     
+    if ( code.length != 16) {
+        alert("Mã thẻ không hợp lệ!");
+        return; 
+    }
+
     myLocal.addNewProduct(card);
     alert('Thêm card thành công!');
 
@@ -64,7 +69,7 @@ function showCard(){
                             <h6>Card Number</h6>
                             <i class='bx bx-wifi icon'></i>
                         </div>
-                        <h5 id="number-${i}" class="number">${code}</h5>
+                        <h5 id="number-${i}" class="number">${code.match(/.{1,4}/g).join(" ")}</h5>
                     </div>
                     <div class="valid-date">
                         <div class="valid-from">
