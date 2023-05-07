@@ -10,7 +10,6 @@ class MyLocalData{
         let result = [];
         if (search.length > 3) {
             result = this.products.filter(product => product.code.includes(search));
-            return result;
         } 
         for (let i = 0; i < this.products.length; i++) {
             let product = this.products[i];
