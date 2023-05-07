@@ -128,7 +128,7 @@ function bt8(){
 
 function bt9(){
     let arr = document.getElementById('inputA-9').value.split(',').map(Number); 
-    let max = arr[0];  
+    let max = arr[0];   
     let max_second = -Infinity; // đảm bảo tính chính xác của thuật toán
 
     for (let i = 0; i < arr.length; i++) {
@@ -157,7 +157,7 @@ function bt10(){
 function bt11(){
     let arr = document.getElementById('inputArr-11').value.split(',').map(Number);   
     let max = arr[0];
-    let viTri_max = [0]
+    let viTri_max = []
 
     for ( let i = 0; i < arr.length; i++) {
         if ( arr[i] > max ) {
@@ -227,19 +227,20 @@ function bt15(){
     return `Kết quả: `;
 }
 
-function bt16(){
+function bt16() {
     let arr = document.getElementById('inputArr-16').value.split(',').map(Number);
-    let v = +document.getElementById('inputV16').value
-
-    let vitriV = arr.indexOf(v); 
-        while (vitriV !== -1) {
-            arr.splice(vitriV, 1); 
-            vitriV = arr.indexOf(v); 
-            arr.push(0);
-        }   
+    let v = +document.getElementById('inputV16').value;
+    
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === v) {
+        arr.splice(i, 1);
+        arr.push(0);   
+      }
+    }
+    
     document.getElementById('kq16').innerHTML = arr;
-    return `Kết quả: `;
-}   
+    return "Kết quả: ";
+  }
 
 function bt17(){
     let arr = document.getElementById('inputArr-17').value.split(',').map(Number);
