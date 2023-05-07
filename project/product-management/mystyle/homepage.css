@@ -79,8 +79,8 @@
    cursor: pointer;
    left: calc(100% - 20px);
    top: -5px;
-   scale: 0;
-   transition: 0.2s ease-in-out;
+   opacity: 0;
+   transition: 0.3s ease-in-out;
 }
 
 .card-manager:hover {
@@ -88,7 +88,7 @@
 }
 
 .card-manager:hover .button-remove{
-   scale: 1;
+   opacity: 1;
 }
 
 .card-manager .button-remove:hover{
