@@ -111,5 +111,58 @@ function clickConfirmRemove(){
     showCard();
 }
 
+function hideCard(){
+    let itemWrap = document.getElementsByClassName("home-text")[0];
+    itemWrap.innerHTML = ''; 
+}
 
+function inputCard(){
+    hideCard(); 
+    let search = document.getElementById('search-card').value.trim();
+    let itemWrap = document.getElementsByClassName("home-text")[0];
+    
+    let cards = myLocal.searchProduct(search)
+    for (let i = 0; i < cards.length; i++) {
+        let { name, code } = cards[i];
+        let cardHtml =
+            `<div class="container card-manager" style="background:#323271">
+                <i onclick="clickRemove('${code}')" class="fa-solid fa-xmark button-remove"></i>
+                <div class="card-head">
+                    <span class="logo">
+                        <img src="images/logo.png" alt="">
+                        <h5>Master Card</h5>
+                    </span>
+                    <span>
+                        <img src="images/chip.png" alt="" class="chip">
+                    </span>
+                </div>
+
+                <div class="card-details">
+                    <div class="name-number">
+                        <div class="card-icon">
+                            <h6>Card Number</h6>
+                            <i class='bx bx-wifi icon'></i>
+                        </div>
+                        <h5 id="number-${i}" class="number">${code.match(/.{1,4}/g).join(" ")}</h5>
+                    </div>
+                    <div class="valid-date">
+                        <div class="valid-from">
+                            <h6>Valid From</h6>
+                            <h5 style="text-align: center;">05/23</h5>
+                        </div>
+                        <div class="valid-thru">
+                            <h6>Valid Thru</h6>
+                            <h5 style="text-align: center;">05/27</h5>
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-name">
+                            <h6 id="username-${i}">${name}</h6>
+                        </div>
+                    </div>   
+                </div>
+            </div>`;
+        itemWrap.innerHTML += cardHtml;
+    }
+}   
  

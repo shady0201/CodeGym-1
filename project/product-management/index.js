@@ -24,15 +24,6 @@ window.addEventListener('load', function() {
     sidebar.classList.remove('close');
 })
 
-let logoutTrigger = document.querySelector('.logout-mode')
-let logoutLive = document.querySelector('.toast')
-if (logoutTrigger) {
-  let toastBootstrap = bootstrap.Toast.getOrCreateInstance(logoutLive)
-  logoutTrigger.addEventListener('click', function() {
-    toastBootstrap.show()
-  })
-}
-
 let logoutYes = document.querySelector('.yes')
 logoutYes.addEventListener('click', function() {
     window.location.href = '../product-management/myhtml/signin.html';
