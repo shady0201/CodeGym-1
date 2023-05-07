@@ -14,7 +14,8 @@ class MyLocalData{
             for (let i = 0; i < this.products.length; i++) {
                 let product = this.products[i];
 
-                if (product.name.toLowerCase().includes(search) || product.code == search) {
+                if (product.name.toLowerCase().includes(search.toLowerCase()) ||  product.name.includes(search) || product.code.toLowerCase() == search.toLowerCase()) 
+                {
                     result.push(product);
                 }
             }
