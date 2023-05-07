@@ -2,7 +2,7 @@ class MyLocalData{
     products = []
 
     findProductByCode(code){
-        let foundProduct = this.products.find(item => item.code === code);
+        let foundProduct = this.products.find(card => card.code === code);
         return foundProduct;
     }
 
