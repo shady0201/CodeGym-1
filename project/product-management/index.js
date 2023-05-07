@@ -3,10 +3,9 @@ alertDm.addEventListener('click', function() {
   alert('Chưa làm xong hí hí');
 })
 
-let alertPage = document.getElementById('page');
-alertPage.addEventListener('click', function() {
+function page(){
   alert('Làm màu thôi');
-})
+}
 
 let body = document.querySelector('body');
 let sidebar = body.querySelector('.sidebar');
