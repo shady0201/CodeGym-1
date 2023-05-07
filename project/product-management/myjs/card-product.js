@@ -75,7 +75,7 @@ function showCard(){
                             <h6>Card Number</h6>
                             <i class='bx bx-wifi icon'></i>
                         </div>
-                        <h5 id="number-${i}" class="number">${code.match(/.{1,4}/g).join(" ")}</h5>
+                        <h5 style="font-weight: 600;" id="number-${i}" class="number">${code.match(/.{1,4}/g).join(" ")}</h5>
                     </div>
                     <div class="valid-date">
                         <div class="valid-from">
@@ -89,7 +89,7 @@ function showCard(){
                     </div>
                     <div class="card-bottom">
                         <div class="card-name">
-                            <h6 id="username-${i}">${name}</h6>
+                            <h6 style="font-weight: 600;" id="username-${i}">${name}</h6>
                         </div>
                     </div>   
                 </div>
@@ -143,7 +143,7 @@ function inputCard(){
                             <h6>Card Number</h6>
                             <i class='bx bx-wifi icon'></i>
                         </div>
-                        <h5 id="number-${i}" class="number">${code.match(/.{1,4}/g).join(" ")}</h5>
+                        <h5 style="font-weight: 600;" id="number-${i}" class="number">${code.match(/.{1,4}/g).join(" ")} </h5>
                     </div>
                     <div class="valid-date">
                         <div class="valid-from">
@@ -157,7 +157,7 @@ function inputCard(){
                     </div>
                     <div class="card-bottom">
                         <div class="card-name">
-                            <h6 id="username-${i}">${name}</h6>
+                            <h6 style="font-weight: 600;" id="username-${i}">${name} </h6>
                         </div>
                     </div>   
                 </div>
