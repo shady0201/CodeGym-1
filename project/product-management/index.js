@@ -1,6 +1,11 @@
-let alertDm = document.querySelector('.dm')
+let alertDm = document.querySelector('.dm');
 alertDm.addEventListener('click', function() {
   alert('Chưa làm xong hí hí');
+})
+
+let alertPage = document.getElementById('page');
+alertPage.addEventListener('click', function() {
+  alert('Làm màu thôi');
 })
 
 let body = document.querySelector('body');

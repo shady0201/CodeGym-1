@@ -32,6 +32,11 @@ function addCard(name, code){
         return; 
     }
 
+    if ( name.length < 5) {
+        alert("Tên không hợp lệ!")
+        return;
+    }
+
     myLocal.addNewProduct(card);
     alert('Thêm card thành công!');
 
@@ -52,7 +57,8 @@ function showCard(){
     for (let i = 0; i < cards.length; i++) {
         let { name, code } = cards[i];
         let cardHtml =
-            `<div class="container" style="background:#323271">
+            `<div class="container card-manager" style="background:#323271">
+                <i onclick="clickRemove('${code}')" class="fa-solid fa-xmark button-remove"></i>
                 <div class="card-head">
                     <span class="logo">
                         <img src="images/logo.png" alt="">
@@ -85,9 +91,6 @@ function showCard(){
                         <div class="card-name">
                             <h6 id="username-${i}">${name}</h6>
                         </div>
-                        <div class="delete-button">
-                            <button onclick="deleteCard(${i})" type="button" class="btn btn-primary delete-card" hidden>Delete</button>
-                        </div>
                     </div>   
                 </div>
             </div>`;
@@ -95,38 +98,18 @@ function showCard(){
     }
 }
 
-let deleteProductButton = document.getElementById('deleteproduct');
-
-deleteProductButton.addEventListener('click', function() {
-    if (deleteProductButton) {
-        deleteProductButton.setAttribute("hidden", "");
-    }
-    
-    let deleteButtons = document.getElementsByClassName("delete-card");
-    for (let i = 0; i < deleteButtons.length; i++) {
-        if (deleteButtons[i]) {
-            deleteButtons[i].removeAttribute("hidden");
-        }         
-    }
-
-    let confirmButtons = document.getElementById('confirmproduct');
-    if (confirmButtons) {
-        confirmButtons.removeAttribute("hidden");
-    }         
-})
-
-function deleteCard(index) {
-    let cardList = JSON.parse(localStorage.getItem('cards'));
-    cardList.splice(index, 1); 
-    showCard(); 
-        let confirmBtn = document.getElementById('confirmproduct');
-        confirmBtn.addEventListener('click', function() {
-            alert('Xác nhận thành công');
-        localStorage.setItem('cards', JSON.stringify(cardList));
-        window.location.reload();
-    })
+function clickRemove(code){
+    $('#remove-code').html(code);
+    $('#code-confirm').html(code);
+    $('#modal-confirm-delete').modal('show');
 }
 
+function clickConfirmRemove(){
+    let code = $('#code-confirm').html();
+    $('#modal-confirm-delete').modal('hide');
+    myLocal.removeProductByCode(code);
+    showCard();
+}
 
 
  

@@ -61,37 +61,17 @@
                         <button id="btn-add-product" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-add-new-product">
                         <span class="add">+ Thêm mới</span>
                         </button>           
-                    </li>                            
-                    <li class="links" id="deleteproduct">
-                        <button id="btn-add-product" class="btn btn-success">
-                        <span class="add">- Xóa</span>
-                        </button>           
-                    </li>                            
-                    <li class="links" id="confirmproduct" hidden>
-                        <button id="btn-add-product" class="btn btn-success" >
-                        <span class="add">&#10003; Xác nhận</span>
-                        </button>           
-                    </li>                            
+                    </li>                                                          
                </ul>            
             </div>
             
             <div class="bottom-content">
                 <li class="logout-mode">
+                    <div id="btn-add-product" data-bs-toggle="modal" data-bs-target="#modal-confirm-logout" style="display: flex;">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
+                    </div>         
                 </li> 
-
-                <center>
-                <div class="toast position-fixed top-0 start-50 translate-middle-x" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-body">
-                        Bạn có muốn đăng xuất không?
-                      <div class="mt-2 pt-2 border-top">
-                        <button type="button" class="btn btn-primary btn-sm yes">Yes</button>
-                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">No</button>
-                      </div>
-                    </div>
-                </div>
-                </center>
 
                 <li class="mode dm">
                     <div class="moon-sun">
@@ -113,7 +93,7 @@
         <div class="home-text"></div>
     </section>
 
-    <nav aria-label="Page navigation example page-nav">
+    <nav aria-label="Page navigation example page-nav" id="page">
         <ul class="pagination justify-content-center">
           <li class="page-item disabled"><a class="page-link">Previous</a></li>
           <li class="page-item"><a class="page-link" href="#" style="background: #0000ffc7; color: white;">1</a></li>
@@ -152,6 +132,40 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="modal-confirm-delete" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Xác nhận xóa</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Bạn có muốn xóa thẻ : <span class="remove-code" id="remove-code"></span>?</p>
+              <p style="display: none;" id="code-confirm"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+              <button onclick="clickConfirmRemove()" type="button" class="btn btn-danger">Xác nhận</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+   
+    <div id="modal-confirm-logout" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>Bạn có muốn đăng xuất ?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+              <button type="button" class="btn btn-primary yes">Có</button>
+            </div>
+          </div>
+        </div>
     </div>
 
     <script src="./myjs/card-product.js"></script>

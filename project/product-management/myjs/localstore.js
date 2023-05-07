@@ -24,8 +24,7 @@ class MyLocalData{
 
     addNewProduct(product){
         this.#products.push(product);
-        let sProducts = JSON.stringify(this.#products);
-        localStorage.setItem('cards', sProducts);
+        this.#saveProducts();
     }
 
     loadProducts(){
@@ -34,6 +33,23 @@ class MyLocalData{
         if (data != null) {
             this.#products = data;
         }
+    }
+
+    removeProductByCode(code){
+        for (let i = 0; i < this.#products.length; i++) {
+            let product = this.#products[i];
+
+            if ( product.code == code) {
+                this.#products.splice(i, 1); 
+            }
+        }
+
+        this.#saveProducts();
+    }
+
+    #saveProducts(){
+        let sProducts = JSON.stringify(this.#products);
+        localStorage.setItem('cards', sProducts);
     }
 }
 

@@ -4,10 +4,11 @@ context.font = "50px Arial";
 context.strokeStyle = "blue";
 context.strokeText("Đăng ký thành công!", 30, 50);
 
-var seconds = 500;
+var seconds = 10;
+document.querySelector("#countdown").innerHTML = seconds;
 var countdown = setInterval(function() {
     seconds--;
-    document.querySelector(".countdown").innerHTML = `Tự động chuyển trang trong: <span style="color:red">${seconds}</span> giây`;
+    document.querySelector("#countdown").innerHTML = seconds;
     if (seconds <= 0) {
     clearInterval(countdown);
     setTimeout(function() {
