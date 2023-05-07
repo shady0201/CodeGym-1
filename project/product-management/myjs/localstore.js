@@ -1,10 +1,10 @@
 class MyLocalData{
     products = []
 
-    // findProductByCode(code){
-    //     let foundProduct = this.products.find(item => item.code === code);
-    //     return foundProduct;
-    // }
+    findProductByCode(code){
+        let foundProduct = this.products.find(item => item.code === code);
+        return foundProduct;
+    }
 
     searchProduct(search){
         let result = [];

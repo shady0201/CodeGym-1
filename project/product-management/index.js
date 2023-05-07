@@ -34,20 +34,20 @@ let codePart3 = document.getElementById('code-part3');
 let codePart4 = document.getElementById('code-part4');
 
 [codePart1, codePart2, codePart3, codePart4].forEach((part, index, parts) => {
-  part.addEventListener('input', () => {
-    if (part.value.length === part.maxLength) {
-      if (index < parts.length - 1) {
-        parts[index + 1].focus();
-      } else {
-        parts.map((part) => part.value).join('');
+    part.addEventListener('input', () => {
+      if (part.value.length === part.maxLength) {
+        if (index < parts.length - 1) {
+          parts[index + 1].focus();
+        } else {
+          parts.map((part) => part.value).join('');
+        }
       }
-    }
-  });
+    });
 
-  part.addEventListener('keydown', (event) => {
-    if (event.key === 'Backspace' && part.value.length === 0 && index > 0) {
-      parts[index - 1].focus();
-    }
-  });
+    part.addEventListener('keydown', (event) => {
+      if (event.key === 'Backspace' && part.value.length === 0 && index > 0) {
+        parts[index - 1].focus();
+      }
+    });
 });
 
