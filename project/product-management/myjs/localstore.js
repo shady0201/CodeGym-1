@@ -8,19 +8,18 @@ class MyLocalData{
 
     searchProduct(search){
         let result = [];
-        if (search.length === 4) {
+        if (search.length > 3) {
             result = this.products.filter(product => product.code.includes(search));
-        } else {
-            for (let i = 0; i < this.products.length; i++) {
-                let product = this.products[i];
+            return result;
+        } 
+        for (let i = 0; i < this.products.length; i++) {
+            let product = this.products[i];
 
-                if (product.name.toLowerCase().includes(search.toLowerCase()) ||  product.name.includes(search) || product.code.toLowerCase() == search.toLowerCase()) 
-                {
-                    result.push(product);
-                }
+            if (product.name.toLowerCase().includes(search.toLowerCase()) ||  product.name.includes(search) )
+            {
+                result.push(product);
             }
         }
-        console.log(result)
         return result;
     }
 
