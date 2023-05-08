@@ -81,24 +81,25 @@ let projectList = [
     },
 
     {   
-        title : 'Product Management',
-        desc : 'Quản lý sản phẩm',
-        url : '/project/product-management/myhtml/signin.html',
-        icon : 'fa-brands fa-product-hunt',
-        anim : 'rotate',
-        bcolor : '#65fd6b91',
-        id : 9,
-    },
-
-    {   
         title : 'Object Oriented Program',
         desc : 'Lập trình đối tượng',
         url : '/project/oop/index.html',
         icon : 'fa-regular fa-object-ungroup',
         anim : 'pulse',
         bcolor : '#d75e7291',
+        id : 9,
+    },
+
+    {   
+        title : 'Product Management',
+        desc : 'Quản lý sản phẩm',
+        url : '/project/product-management/myhtml/signin.html',
+        icon : 'fa-brands fa-product-hunt',
+        anim : 'rotate',
+        bcolor : '#65fd6b91',
         id : 10,
     },
+
 ]
 renderItem();
 

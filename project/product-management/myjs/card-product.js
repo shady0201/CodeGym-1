@@ -1,8 +1,9 @@
 $( document ).ready(function() {   // == document.addEventListener('DOMContentLoaded', function()
     myLocal.loadProducts();
     showCard(); 
-    
-    document.getElementById('btn-savecard').addEventListener('click', function() {
+});    
+
+function saveCard(){
        let clientName = document.getElementById('clientname').value;
        const formattedClientName = clientName.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); 
        const upperCaseFormattedClientName = formattedClientName.toUpperCase();
@@ -12,8 +13,7 @@ $( document ).ready(function() {   // == document.addEventListener('DOMContentLo
        let codePart4 = document.getElementById('code-part4').value.trim()
        code = codePart1 + codePart2 + codePart3 + codePart4;
        addCard(upperCaseFormattedClientName, code);
-    })
-});
+    }
 
 function addCard(name, code){
     let card = {
@@ -58,7 +58,8 @@ function showCard(){
         let { name, code } = cards[i];
         let cardHtml =
             `<div class="container card-manager" style="background:#323271">
-                <i onclick="clickRemove('${code}')" class="fa-solid fa-xmark button-remove"></i>
+                <i onclick="clickRemove('${code}')" class="fa-solid fa-xmark button-remove" ></i>
+                <i onclick="clickUpdate('${code}')" class="fa-solid fa-minus button-update"id=codeupdate-${i}></i>
                 <div class="card-head">
                     <span class="logo">
                         <img src="images/logo.png" alt="">
@@ -99,16 +100,33 @@ function showCard(){
 }
 
 function clickRemove(code){
-    $('#remove-code').html(code);
-    $('#code-confirm').html(code);
+    let renderCode = code.match(/.{1,4}/g).join(" ")
+    $('#remove-code').html(renderCode);
+    $('#code-confirm-remove').html(code);
     $('#modal-confirm-delete').modal('show');
 }
 
 function clickConfirmRemove(){
-    let code = $('#code-confirm').html();
+    let code = $('#code-confirm-remove').html();
     $('#modal-confirm-delete').modal('hide');
     myLocal.removeProductByCode(code);
     showCard();
+}
+
+function clickUpdate(code){
+    let renderCode = code.match(/.{1,4}/g).join(" ")
+    $('#update-code').html(renderCode);
+    $('#code-confirm-update').html(code);
+    $('#modal-confirm-update').modal('show');
+}
+
+function clickConfirmUpdate(){
+    $('#modal-confirm-update').modal('hide');
+    // let cards = myLocal.getProducts()
+    // for (let i = 0; i < cards.length; i++) {
+    //     document.getElementById(`number-${i}`).innerHTML = `<input type='text'>`;
+    //     document.getElementById(`username-${i}`).innerHTML = `<input type='number'>`;
+    // }
 }
 
 function hideCard(){
@@ -124,9 +142,10 @@ function inputCard(){
     let cards = myLocal.searchProduct(search)
     for (let i = 0; i < cards.length; i++) {
         let { name, code } = cards[i];
-        let cardHtml =
+        let cardHtml =  
             `<div class="container card-manager" style="background:#323271">
                 <i onclick="clickRemove('${code}')" class="fa-solid fa-xmark button-remove"></i>
+                <i onclick="clickUpdate('${code}')" class="fa-solid fa-xmark button-update"></i>
                 <div class="card-head">
                     <span class="logo">
                         <img src="images/logo.png" alt="">
