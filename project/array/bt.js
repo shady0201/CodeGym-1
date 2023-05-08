@@ -140,7 +140,7 @@ function bt9(){
         }
     }
     document.getElementById('kq9').innerHTML = (`Số max thứ hai là: ${max_second}`);
-    return `Kết quả : `;
+    return `Kết quả : `;    
 }
 
 function bt10(){

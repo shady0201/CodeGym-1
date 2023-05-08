@@ -61,7 +61,7 @@
                         <button id="btn-add-product" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-add-new-product">
                         <span class="add">+ Thêm mới</span>
                         </button>           
-                    </li>                                                          
+                    </li>                                                   
                </ul>            
             </div>
             
@@ -127,7 +127,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-              <button id="btn-savecard" type="button" class="btn btn-primary ps-5 pe-5">Lưu</button>
+              <button onclick="saveCard()" id="btn-savecard" type="button" class="btn btn-primary ps-5 pe-5">Lưu</button>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@
             </div>
             <div class="modal-body">
               <p>Bạn có muốn xóa thẻ : <span class="remove-code" id="remove-code"></span>?</p>
-              <p style="display: none;" id="code-confirm"></p>
+              <p style="display: none;" id="code-confirm-remove"></p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
@@ -153,6 +153,55 @@
         </div>
     </div>
 
+    <div id="modal-confirm-update" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Xác nhận sửa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Bạn có muốn sửa thẻ : <span class="update-code" id="update-code"></span>?</p>
+            <p style="display: none;" id="code-confirm-update"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            <button onclick="clickConfirmUpdate()" type="button" class="btn btn-primary">Có</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-update-product" tabindex="-1"  aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal-title">Sửa thẻ</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="background-color: #f9f8fb;">
+              <form id="form-add-product" action="" method="post">
+                  <div class="mb-3">
+                      <label for="formFile" class="form-label" style="margin-top: 10px;">Tên khách hàng</label>
+                      <input class="form-control" type="text" name="name" id="clientnameold" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="formFile" class="form-label inputcode">Mã thẻ</label>
+                      <input class="form-control" type="text" name="code" id="code-part1" maxlength="4" required onkeyup="if(this.value.length == this.maxLength) document.getElementById('code-part2').focus()">-
+                      <input class="form-control" type="text" name="code" id="code-part2" maxlength="4" required onkeyup="if(this.value.length == this.maxLength) document.getElementById('code-part3').focus()">-
+                      <input class="form-control" type="text" name="code" id="code-part3" maxlength="4" required onkeyup="if(this.value.length == this.maxLength) document.getElementById('code-part4').focus()">-
+                      <input class="form-control" type="text" name="code" id="code-part4" maxlength="4" required>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            <button id="btn-savecard" type="button" class="btn btn-primary ps-5 pe-5">Lưu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
    
     <div id="modal-confirm-logout" class="modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
