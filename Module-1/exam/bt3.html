@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumOfListFibonacy(x) {
+            let n1 = 0;
+            let n2 = 1;
+            let sum = 0;
+
+            for (let i = 0 ; i <= x; i++ ){
+                sum += n1;
+                let temp = n1 + n2;
+                n1 = n2; 
+                n2 = temp; 
+            }
+            return `Tổng các số fibonacy từ 0 tới ${x} là: ${sum}`;
+        }
+
+        let number = +prompt("Nhập số x")
+        console.log(sumOfListFibonacy(number));
+    </script>
+</body>
+</html>

@@ -256,7 +256,7 @@ function inputCard(){
                     <div class="name-number">
                         <div class="card-icon">
                             <h6>Card Number</h6>
-                            <i class='bx bx-wifi icon'></i>
+                            <i class='bx bx-wifi icon'></i> 
                         </div>
                         <h5 style="font-weight: 600;" id="number-${i}" class="number">${code.match(/.{1,4}/g).join(" ")} </h5>
                     </div>

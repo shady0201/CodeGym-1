@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function findmax(arr){
+        let max = arr[0];
+        let max_second = -1;
+
+        for ( let i = 1; i < arr.length; i++) {
+            if ( arr[i] > max ) {
+                max_second = max; 
+                max = arr[i];
+
+            } else if (arr[i] > max_second && arr[i] !== max){
+            max_second = arr[i];
+            }   
+        }
+        console.log(`Điểm thi lớn thứ 2 là: ${max_second}`);    
+    }
+    let arr = [2,7,4,10,10,9];
+    findmax(arr);
+
+    </script>
+</body>
+</html>
