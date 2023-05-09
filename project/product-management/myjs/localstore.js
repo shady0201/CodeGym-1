@@ -1,61 +1,61 @@
-// class MyLocalData{
-//     products = []
+class MyLocalData{
+    products = []
 
-//     findProductByCode(code){
-//         let foundProduct = this.products.find(card => card.code === code);
-//         return foundProduct;
-//     }
+    findProductByCode(code){
+        let foundProduct = this.products.find(card => card.code === code);
+        return foundProduct;
+    }
 
-//     searchProduct(search){
-//         let result = [];
-//         if (search.length > 3) {
-//             result = this.products.filter(product => product.code.includes(search));
-//         } 
-//         for (let i = 0; i < this.products.length; i++) {
-//             let product = this.products[i];
+    searchProduct(search){
+        let result = [];
+        if (search.length > 3) {
+            result = this.products.filter(product => product.code.includes(search));
+        } 
+        for (let i = 0; i < this.products.length; i++) {
+            let product = this.products[i];
 
-//             if (product.name.toLowerCase().includes(search.toLowerCase()) ||  product.name.includes(search) )
-//             {
-//                 result.push(product);
-//             }
-//         }
-//         return result;
-//     }
+            if (product.name.toLowerCase().includes(search.toLowerCase()) ||  product.name.includes(search) )
+            {
+                result.push(product);
+            }
+        }
+        return result;
+    }
 
-//     getProducts(){
-//         return this.products;
-//     }
+    getProducts(){
+        return this.products;
+    }
 
-//     addNewProduct(product){
-//         this.products.push(product);
-//         this.saveProducts();
-//     }
+    addNewProduct(product){
+        this.products.push(product);
+        this.saveProducts();
+    }
 
-//     loadProducts(){
-//         let localData = localStorage.getItem('cards');
-//         let data = JSON.parse(localData);
-//         if (data != null) {
-//             this.products = data;
-//         }
-//     }
+    loadProducts(){
+        let localData = localStorage.getItem('cards');
+        let data = JSON.parse(localData);
+        if (data != null) {
+            this.products = data;
+        }
+    }
 
-//     removeProductByCode(code){
-//         for (let i = 0; i < this.products.length; i++) {
-//             let product = this.products[i];
+    removeProductByCode(code){
+        for (let i = 0; i < this.products.length; i++) {
+            let product = this.products[i];
 
-//             if ( product.code == code) {
-//                 this.products.splice(i, 1); 
-//             }
-//         }
+            if ( product.code == code) {
+                this.products.splice(i, 1); 
+            }
+        }
 
-//         this.saveProducts();
-//     }
+        this.saveProducts();
+    }
 
-//     saveProducts(){
-//         let sProducts = JSON.stringify(this.products);
-//         localStorage.setItem('cards', sProducts);
-//     }
-// }
+    saveProducts(){
+        let sProducts = JSON.stringify(this.products);
+        localStorage.setItem('cards', sProducts);
+    }
+}
 
-// const myLocal = new MyLocalData();
+const myLocal = new MyLocalData();
 
