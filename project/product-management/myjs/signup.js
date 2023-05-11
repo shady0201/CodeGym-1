@@ -10,7 +10,7 @@ function getUsersFromLocalStorage() {
 
 function register() {
     let usn = document.getElementById('usn').value;
-    let pass = document.getElementById('pass').value;
+    let pass = document.getElementById('password').value;
     
     for (let i = 0; i < listUser.length; i++) {
         if (listUser[i].username === usn) {
@@ -31,7 +31,7 @@ function register() {
     window.location.href = '/project/product-management/myhtml/finishregister.html';
 }
 
-document.getElementById('pass').addEventListener('keydown', function(event) {
+document.getElementById('password').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') { 
       event.preventDefault(); 
       register(); 
@@ -40,7 +40,7 @@ document.getElementById('pass').addEventListener('keydown', function(event) {
 
 function empty(){
     document.getElementById('usn').value = '';
-    document.getElementById('pass').value = '';
+    document.getElementById('password').value = '';
 }
 
 

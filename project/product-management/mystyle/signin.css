@@ -74,7 +74,7 @@ header{
 /* helpers/align.css */
 
 .align {  
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
 .grid {
@@ -107,11 +107,7 @@ header{
 }
 
 .icon {
-  block-size: 1em;
-  display: inline-block;
-  fill: var(--iconFill);
-  inline-size: 1em;
-  vertical-align: middle;
+  font-size: 14px;
 }
 
 /* layout/base.css */
@@ -171,6 +167,7 @@ a:hover {
 }
 
 input {
+  border-radius: 10px !important;
   background-image: none;
   border: 0;
   color: inherit;
@@ -194,14 +191,6 @@ input[type="submit"] {
 .form input[type="text"],
 .form input[type="submit"] {
   inline-size: 100%;
-}
-
-.form__field {
-  display: flex;
-}
-
-.form__input {
-  flex: 1;
 }
 
 /* modules/login.css */
@@ -273,4 +262,36 @@ p {
 
 .text--center {
   text-align: center;
+  margin-top: 10px;
+}
+
+.text--center a{
+  text-decoration: none;
+}
+
+.user{
+  display: flex;
+  align-items: baseline;
+}
+
+.email{
+  display: flex;
+  align-items: baseline;
+}
+
+.password{
+  display: flex;
+  align-items: baseline;
+}
+
+.login i{
+  margin-right: 10px;
+}
+
+.invalid{
+  color: red;
+}
+
+.border-invalid{
+  border: 1px solid red;
 }

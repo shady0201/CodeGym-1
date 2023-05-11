@@ -9,8 +9,7 @@ body{
   background-image: url("../images/background.jpg");
   background-attachment: fixed;
   background-size: cover;
-  max-height: 100vh;
-
+  height: 100vh;
 }   
 
 .anh{
@@ -23,6 +22,7 @@ body{
   width: 100vh;
   max-height: 520px;
 }
+
 
 .footerNew {
   position: fixed;
@@ -71,12 +71,6 @@ header{
   --baseColor: #606468;
 }
 
-/* helpers/align.css */
-
-.align {  
-  margin-top: 150px;
-}
-
 .grid {
   inline-size: 90%;
   margin-inline: auto;
@@ -107,11 +101,7 @@ header{
 }
 
 .icon {
-  block-size: 1em;
-  display: inline-block;
-  fill: var(--iconFill);
-  inline-size: 1em;
-  vertical-align: middle;
+  font-size: 14px;
 }
 
 /* layout/base.css */
@@ -125,10 +115,6 @@ header{
   --bodyFontSize: 0.875rem;
   --bodyFontWeight: 400;
   --bodyLineHeight: 1.5;
-}
-
-* {
-  box-sizing: inherit;
 }
 
 html {
@@ -171,6 +157,7 @@ a:hover {
 }
 
 input {
+  border-radius: 10px !important;
   background-image: none;
   border: 0;
   color: inherit;
@@ -194,14 +181,6 @@ input[type="submit"] {
 .form input[type="text"],
 .form input[type="submit"] {
   inline-size: 100%;
-}
-
-.form__field {
-  display: flex;
-}
-
-.form__input {
-  flex: 1;
 }
 
 /* modules/login.css */
@@ -273,4 +252,45 @@ p {
 
 .text--center {
   text-align: center;
+  margin-top: 10px;
+}
+
+.text--center a{
+  text-decoration: none;
+}
+
+.user{
+  display: flex;
+  align-items: baseline;
+}
+
+.email{
+  display: flex;
+  align-items: baseline;
+}
+
+.password{
+  display: flex;
+  align-items: baseline;
+}
+
+.password-confirmation{
+  display: flex;
+  align-items: baseline;
+}
+
+.login i{
+  margin-right: 10px;
+}
+
+.invalid{
+  color: red;
+}
+
+.border-invalid{
+  border: 1px solid red;
+}
+
+.align {  
+  margin-top: 30px;
 }

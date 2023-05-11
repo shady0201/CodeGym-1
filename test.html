@@ -8,20 +8,26 @@
     
 </head>
 <body>
-  <input type="text" pattern="\d{4}-\d{4}-\d{4}-\d{4}" />
-  </style>
-    
     <script>
-    const input = document.querySelector('input');
-      const pattern = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
-      
-      input.addEventListener('input', () => {
-        if (!pattern.test(input.value)) {
-          input.setCustomValidity('Số không hợp lệ. Vui lòng nhập số theo định dạng 1234-5678-9012-3456.');
-        } else {
-          input.setCustomValidity('');
-        }
-      });</script>
-    <script src="test.js"></script>
+      function check5K(number){
+      if(number === 1 || number === 5) {
+          return true;
+      }
+
+      if(number % 5 != 0) {
+          return false;
+      }
+  
+      return check5K( number / 5 )    
+    }
+
+      let arr = [1, 2, 3, 25, 125, 625, 10, 60];
+      for(let i = 0; i < arr.length; i++){
+          if(check5K(arr[i])){
+              document.write(arr[i] + "</br>")
+          }
+      }
+    </script>
+
 </body>
 </html>

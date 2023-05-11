@@ -13,6 +13,7 @@ let toggle = body.querySelector('.toggle');
 let searchSidebar = body.querySelector('.search-box');
 toggle.addEventListener('click', function() {
     sidebar.classList.toggle('close');
+    // console.log(sidebar.classList.contains('close'))
 });
 
 searchSidebar.addEventListener('click', function() {
@@ -20,7 +21,7 @@ searchSidebar.addEventListener('click', function() {
 });
 
 window.addEventListener('load', function() {
-    sidebar.classList.remove('close');
+    sidebar.classList.toggle('close');
 })
 
 let logoutYes = document.querySelector('.yes')

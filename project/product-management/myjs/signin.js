@@ -24,7 +24,7 @@ function login(){
 
 }
 
-document.getElementById('pass').addEventListener('keydown', function(event) {
+document.getElementById('password').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') { 
       event.preventDefault(); 
       login(); 
