@@ -28,10 +28,10 @@ body{
   position: fixed;
   background: #363844;
   font-size: 12px;
-  line-height: 24px;
+  /* line-height: 24px; */
   text-align: center;
   color: #FFFFFF;
-  padding: 25px 0px 15px;
+  padding: 15px 0px 3px 0px;
   letter-spacing: 0.1px;
   width: 100%;
   bottom: 0;
@@ -73,7 +73,7 @@ header{
   inline-size: 90%;
   margin-inline: auto;
   max-inline-size: 20rem;
-  margin-top: 30px
+  margin-top: 25px
 }
 
 /* helpers/hidden.css */
@@ -285,6 +285,7 @@ p {
 
 .invalid{
   color: red;
+  font-style: italic;
 }
 
 .border-invalid{
