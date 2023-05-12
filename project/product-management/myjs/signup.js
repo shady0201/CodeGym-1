@@ -52,6 +52,7 @@ function empty(){
     document.getElementById('email').value = '';
     document.getElementById('password').value = '';
     document.getElementById('password-confirmation').value = '';
+    document.getElementById('alert').innerHTML = '';
 }
 
 

@@ -1,7 +1,7 @@
 function Validator(options) {
 
     function validate(inputElement, rule) {
-        var errorMessage = rule.test(inputElement.value);
+        var errorMessage = rule.announce(inputElement.value);
         var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
                         
         if ( errorMessage ) {
@@ -42,18 +42,18 @@ function Validator(options) {
 function isRequired(selector, message) {
     return {
         selector : selector,
-        test: function(value) {
+        announce: function(value) {
             return value.trim() ? undefined : message
-        }
+        }   
     }
 }
 
 function isEmail(selector, message) {
     return {
         selector : selector,
-        test: function(value) {
+        announce: function(value) {
             var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            return regex.test(value) ? undefined : message 
+            return regex.test(value) ? undefined : message
         }
     }    
 }
@@ -61,7 +61,7 @@ function isEmail(selector, message) {
 function isRequiredPass(selector, message) {
     return {
         selector : selector,
-        test: function(value) {
+        announce: function(value) {
             return value.trim() ? undefined : message 
         }
     }
@@ -71,8 +71,8 @@ function isRequiredPass(selector, message) {
 function pwMinLength(selector, min, message) {
     return {
         selector : selector,
-        test: function(value) {
-            return value.length >= min ? undefined : message
+        announce: function(value) {
+            return value.length >=min ? undefined : message
         }
     }
 }
@@ -80,10 +80,10 @@ function pwMinLength(selector, min, message) {
 function isConfirmed(selector, getConfirmValue, message){
     return {
         selector : selector,
-        test: function(value) {
+        announce: function(value) {
             if ( value == ''){
                 return value.trim() ? undefined : 'Bạn chưa nhập mật khẩu' 
-            }   
+            }
             else {
             return value == getConfirmValue() ? undefined : message 
             }
