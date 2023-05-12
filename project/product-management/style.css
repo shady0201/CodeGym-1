@@ -115,6 +115,7 @@ body{
 
 header .image-text .header-text{
    display: flex;
+   flex-direction: column
 }
 
 .header-text .name{

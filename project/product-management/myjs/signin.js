@@ -1,5 +1,10 @@
 let listUser = JSON.parse(localStorage.getItem('listUser')) || [];
 
+document.getElementById('form-1').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    register();
+});
+
 function getUsersFromLocalStorage() {
     let storedListUser = localStorage.getItem('listUser');
     if (storedListUser) {
@@ -9,18 +14,18 @@ function getUsersFromLocalStorage() {
 }
 
 function login(){
-    let usn = document.getElementById('usn').value
-    let pass = document.getElementById('pass').value
+    let email = document.getElementById('email').value
+    let pass = document.getElementById('password').value
     
     listUser = getUsersFromLocalStorage();
 
     for (let i = 0; i < listUser.length; i++) {
-        if (listUser[i].username == usn && listUser[i].password == pass){
+        if (listUser[i].email == email && listUser[i].password == pass){
             window.location.href = '/project/product-management/index.html'
             return;
         }  
     }
-    document.getElementById('alert').innerHTML  = `<p><img src="../images/alert.jpeg"><span>Sai tài khoản hoặc mật khẩu.</span></p>`
+    document.getElementById('alert').innerHTML  = `<p><img src="../images/alert.jpeg"><span>Sai email hoặc mật khẩu.</span></p>`
 
 }
 

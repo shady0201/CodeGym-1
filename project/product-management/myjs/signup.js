@@ -7,7 +7,7 @@ document.getElementById('form-1').addEventListener('submit', function(event) {
 
 function registerInfo(usn, pass, email) {
     for (let i = 0; i < listUser.length; i++) {
-        if (listUser[i].email === email) {
+        if (listUser[i].email == email) {
             document.getElementById('alert').innerHTML = `<p><img src="../images/alert.jpeg"><span>Email <span style="color:red">${email}</span> đã có người sử dụng</span></p>`
             return;
         }

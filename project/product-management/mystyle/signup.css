@@ -1,8 +1,34 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+  --baseColor: #606468;
+  --iconFill: var(--baseColor);
+  --htmlFontSize: 100%;
+  --bodyBackgroundColor: #173a52;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+  --anchorColor: #eee;
+  --formGap: 0.875rem;
+  --loginBorderRadus: 0.25rem;
+  --loginColor: rgba(0, 0, 0, 0.84);
+  --loginInputBackgroundColor: #d0d7e052;
+  --loginInputHoverBackgroundColor: #a9b8cc52;
+  --loginLabelBackgroundColor: #b8c1cc;
+  --loginSubmitBackgroundColor: #4c7eea;
+  --loginSubmitColor: #eee;
+  --loginSubmitHoverBackgroundColor: #4c7eea;
 }
 
 body{
@@ -22,7 +48,6 @@ body{
   width: 100vh;
   max-height: 520px;
 }
-
 
 .footerNew {
   position: fixed;
@@ -59,24 +84,13 @@ header{
   margin-bottom: -10px;
 }
 
-@use postcss-preset-env {
-  stage: 0;
-}
-
-/* config.css */
-
-:root {
-  --baseColor: #606468;
-}
-
 .grid {
   inline-size: 90%;
   margin-inline: auto;
   max-inline-size: 20rem;
-  margin-top: 25px
+  margin-top: 25px;
+  padding-bottom: 12px;
 }
-
-/* helpers/hidden.css */
 
 .hidden {
   border: 0;
@@ -89,53 +103,8 @@ header{
   width: 1px;
 }
 
-/* helpers/icon.css */
-
-:root {
-  --iconFill: var(--baseColor);
-}
-
-.icons {
-  display: none;
-}
-
 .icon {
   font-size: 14px;
-}
-
-/* layout/base.css */
-
-:root {
-  --htmlFontSize: 100%;
-  --bodyBackgroundColor: #173a52;
-  --bodyColor: var(--baseColor);
-  --bodyFontFamily: "Open Sans";
-  --bodyFontFamilyFallback: sans-serif;
-  --bodyFontSize: 0.875rem;
-  --bodyFontWeight: 400;
-  --bodyLineHeight: 1.5;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: var(--htmlFontSize);
-}
-
-body {
-  background-color: var(--bodyBackgroundColor);
-  color: var(--bodyColor);
-  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
-  font-size: var(--bodyFontSize);
-  font-weight: var(--bodyFontWeight);
-  line-height: var(--bodyLineHeight);
-  margin: 0;
-  /* min-block-size: 100vh; */
-}
-
-/* modules/anchor.css */
-
-:root {
-  --anchorColor: #eee;
 }
 
 a {
@@ -149,12 +118,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* modules/form.css */
-
-:root {
-  --formGap: 0.875rem;
-}
-
 input {
   border-radius: 10px !important;
   background-image: none;
@@ -164,7 +127,6 @@ input {
   margin: 0;
   outline: 0;
   padding: 0;
-  transition: background-color 0.3s;
 }
 
 input[type="submit"] {
@@ -182,24 +144,9 @@ input[type="submit"] {
   inline-size: 100%;
 }
 
-/* modules/login.css */
-
-:root {
-  --loginBorderRadus: 0.25rem;
-  --loginColor: rgba(0, 0, 0, 0.84);
-
-  --loginInputBackgroundColor: #d0d7e052;
-  --loginInputHoverBackgroundColor: #a9b8cc52;
-
-  --loginLabelBackgroundColor: #b8c1cc;
-
-  --loginSubmitBackgroundColor: #4c7eea;
-  --loginSubmitColor: #eee;
-  --loginSubmitHoverBackgroundColor: #4c7eea;
-}
-
 .login {
   color: var(--loginColor);
+  margin-top: -10px;
 }
 
 .login label,
@@ -242,8 +189,6 @@ input[type="submit"] {
 .login input[type="submit"]:hover {
   background-color: var(--loginSubmitHoverBackgroundColor);
 }
-
-/* modules/text.css */
 
 p {
   margin-block: 1.5rem;
@@ -296,7 +241,7 @@ p {
 .align {  
   background: #ffffff;
   max-width: 400px;
-  min-height: 490px;
+  min-height: 400px;
   margin: auto;
   border-radius: 10px;
   box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.5);

@@ -25,26 +25,16 @@
   </header>
 
 <div class="align">
-      <div class="grid">
-        <div id="alert" class="fSignIn" style="display: block;"></div>
-          <form action="" class="form" id="form-1">
-            <div class="form login">
-                <div class="form-user">
-                  <div class="user">
-                    <i class="fa-solid fa-user icon"></i>
-                    <h6>Tên đầy đủ</h6>  
-                  </div>  
-                    <input autocomplete="username" id="usn" type="text" name="name" class="form__input form-label" placeholder="VD : Lê Văn A" required style="margin-bottom: 0;">
-                    <span class="form-message"></span>  
-                </div>
-                  
-
+      <div class="grid">   
+          <form action="" class="form" id="form-1"> 
+            <div class="form login">  
+              <span id="alert" class="fSignIn" style="margin-bottom: -10px"></span> 
                 <div class="form-email">
                   <div class="email">
                     <i class="fa-solid fa-envelope icon"></i>
                     <h6>Email</h6>
                   </div>
-                    <input autocomplete="email" id="email" type="text" name="email" class="form__input form-label" placeholder="VD: abc@gmail.com" required style="margin-bottom: 0;">
+                    <input autocomplete="email" id="email" type="text" name="email" class="form__input form-label" placeholder="VD: abc@gmail.com" style="margin-bottom: 0;">
                     <span class="form-message"></span>
                 </div>
                   
@@ -53,7 +43,7 @@
                     <i class="fa-solid fa-lock icon"></i>  
                     <h6>Mật khẩu</h6>
                   </div>
-                  <input id="password" type="password" name="password" class="form__input 123" placeholder="Mật khẩu" required style="margin-bottom: 0">
+                  <input id="password" type="password" name="password" class="form__input 123" placeholder="Mật khẩu" style="margin-bottom: 0">
                   <span class="form-message"></span>
                 </div>
 
@@ -64,30 +54,18 @@
           </form>
 
           <p class="text--center">Bạn chưa có tài khoản? 
-          <a href="signup.html">Đăng ký ngay</a></p>
-            
+          <a href="signup.html">Đăng ký ngay</a></p>         
       </div>
+</div> 
 
       <div class="footerNew">
         <p><img src="../images/icon-maps.jpg"> Công ty CP CodeGym Việt Nam - MST: 010 810 4526. | <img src="../images/phoneft.jpeg"> Đ/c: Căn hộ TT01.23 dự án Hải Đăng city, phường Mỹ Đình 2, quận Nam Từ Liêm, thành phố Hà Nội. Hotline: 0989 534 458</p>
       </div>
-</div>   
+  
 
     <script src="../myjs/signin.js"></script>
-    <script src="../myjs/validation.js"></script>
-    <script>
-
-      Validator({
-        form : '#form-1',
-        errorSelector : '.form-message',
-        rules: [
-          isRequired('#usn'),
-          isEmail('#email'),
-          isRequiredPass('#password'),
-        ]
-      })
-
-    </script>
+    <script src="../myjs/validation-signin.js"></script>
+    <script src="../myjs/form-validation-signin.js"></script>
 </body>
 </html>
 

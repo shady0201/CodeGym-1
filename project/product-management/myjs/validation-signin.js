@@ -39,15 +39,6 @@ function Validator(options) {
         }   
 }
 
-function isRequired(selector, message) {
-    return {
-        selector : selector,
-        announce: function(value) {
-            return value.trim() ? undefined : message
-        }   
-    }
-}
-
 function isEmail(selector, message) {
     return {
         selector : selector,
@@ -56,16 +47,6 @@ function isEmail(selector, message) {
             return regex.test(value) ? undefined : message
         }
     }    
-}
-
-function isRequiredPass(selector, message) {
-    return {
-        selector : selector,
-        announce: function(value) {
-            return value.trim() ? undefined : message 
-        }
-    }
-
 }
 
 function pwMinLength(selector, min, message) {
@@ -77,16 +58,3 @@ function pwMinLength(selector, min, message) {
     }
 }
 
-function isConfirmed(selector, getConfirmValue, message){
-    return {
-        selector : selector,
-        announce: function(value) {
-            if ( value == ''){
-                return value.trim() ? undefined : 'Bạn chưa nhập mật khẩu' 
-            }
-            else {
-            return value == getConfirmValue() ? undefined : message 
-            }
-        }
-    }
-}
