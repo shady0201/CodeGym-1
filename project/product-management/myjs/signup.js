@@ -1,34 +1,43 @@
 let listUser = JSON.parse(localStorage.getItem('listUser')) || [];
 
-function getUsersFromLocalStorage() {
-    let storedListUser = localStorage.getItem('listUser');
-    if (storedListUser) {
-        return JSON.parse(storedListUser);
-    }
-    return [];
-}
+document.getElementById('form-1').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    register();
+});
 
-function register() {
-    let usn = document.getElementById('usn').value;
-    let pass = document.getElementById('password').value;
-    
+function registerInfo(usn, pass, email) {
     for (let i = 0; i < listUser.length; i++) {
-        if (listUser[i].username === usn) {
-            document.getElementById('alert').innerHTML  = `<p><img src="../images/alert.jpeg"><span>Tài khoản ${usn} đã có người sử dụng.</span></p>`
+        if (listUser[i].email === email) {
+            document.getElementById('alert').innerHTML = `<p><img src="../images/alert.jpeg"><span>Email <span style="color:red">${email}</span> đã có người sử dụng</span></p>`
             return;
         }
     }
-        
+
     listUser.push({
         username: usn,
-        password: pass
+        password: pass,
+        email: email
     });
 
     localStorage.setItem('listUser', JSON.stringify(listUser));
-    
+
     empty();
-  
     window.location.href = '/project/product-management/myhtml/finishregister.html';
+}
+
+
+function register() {
+    let usn = document.getElementById('usn').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let pass = document.getElementById('password').value.trim();
+    let passConfirm = document.getElementById('password-confirmation').value.trim();
+    
+    if (pass !== passConfirm) {
+        document.getElementById('alert').innerHTML = `<p><img src="../images/alert.jpeg"><span> Mật khẩu không khớp</span></p>`;
+        return;
+    }
+    
+    registerInfo(usn, pass, email);
 }
 
 document.getElementById('password').addEventListener('keydown', function(event) {
@@ -40,7 +49,9 @@ document.getElementById('password').addEventListener('keydown', function(event) 
 
 function empty(){
     document.getElementById('usn').value = '';
+    document.getElementById('email').value = '';
     document.getElementById('password').value = '';
+    document.getElementById('password-confirmation').value = '';
 }
 
 

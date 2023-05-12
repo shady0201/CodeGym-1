@@ -72,7 +72,7 @@ function pwMinLength(selector, min, message) {
     return {
         selector : selector,
         test: function(value) {
-            return value.length >=min ? undefined : message
+            return value.length >= min ? undefined : message
         }
     }
 }
@@ -81,7 +81,12 @@ function isConfirmed(selector, getConfirmValue, message){
     return {
         selector : selector,
         test: function(value) {
+            if ( value == ''){
+                return value.trim() ? undefined : 'Bạn chưa nhập mật khẩu' 
+            }   
+            else {
             return value == getConfirmValue() ? undefined : message 
+            }
         }
     }
 }

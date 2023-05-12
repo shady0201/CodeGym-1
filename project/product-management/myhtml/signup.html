@@ -26,14 +26,14 @@
     <div class="align">
         <div class="grid">
           <div id="alert" class="fSignIn" style="display: block;"></div>
-            <form action="" method="POST" class="form" id="form-1">
+            <form action="" class="form" id="form-1">
               <div class="form login">
                   <div class="form-user">
                     <div class="user">
                       <i class="fa-solid fa-user icon"></i>
                       <h6>Tên đầy đủ</h6>  
                     </div>  
-                      <input autocomplete="username" id="usn" type="text" name="name" class="form__input form-label" placeholder="VD: Lê Văn A" required style="margin-bottom: 0;">
+                      <input autocomplete="username" id="usn" type="text" name="name" class="form__input form-label" placeholder="VD: Lê Văn A" style="margin-bottom: 0;">
                       <span class="form-message"></span>  
                   </div>
                     
@@ -43,7 +43,7 @@
                       <i class="fa-solid fa-envelope icon"></i>
                       <h6>Email</h6>
                     </div>
-                      <input autocomplete="email" id="email" type="text" name="email" class="form__input form-label" placeholder="VD: abc@gmail.com" required style="margin-bottom: 0;">
+                      <input autocomplete="email" id="email" type="text" name="email" class="form__input form-label" placeholder="VD: abc@gmail.com" style="margin-bottom: 0;">
                       <span class="form-message"></span>
                   </div>
                     
@@ -52,7 +52,7 @@
                       <i class="fa-solid fa-lock icon"></i>  
                       <h6>Mật khẩu</h6>
                     </div>
-                    <input id="password" type="password" name="password" class="form__input form-label" placeholder="Mật khẩu" required style="margin-bottom: 0">
+                    <input id="password" type="password" name="password" class="form__input form-label" placeholder="Mật khẩu" style="margin-bottom: 0">
                     <span class="form-message"></span>
                   </div>
 
@@ -61,7 +61,7 @@
                       <i class="fa-solid fa-key icon"></i>  
                       <h6>Nhập lại mật khẩu</h6>
                     </div>
-                    <input id="password-confirmation" type="password" name="password" class="form__input form-label" placeholder="Nhập lại mật khẩu" required style="margin-bottom: 0">
+                    <input id="password-confirmation" type="password" name="password" class="form__input form-label" placeholder="Nhập lại mật khẩu" style="margin-bottom: 0">
                     <span class="form-message"></span>
                   </div>
         
@@ -76,23 +76,8 @@
           </div>
     </div>   
     
-        <script src="../myjs/signin.js"></script>
+        <script src="../myjs/signup.js"></script>
         <script src="../myjs/validation.js"></script>
-        <script>
-    
-          Validator({
-            form : '#form-1',
-            errorSelector : '.form-message',
-            rules: [
-              isRequired('#usn', 'Vui lòng nhập tên đầy đủ'),
-              isEmail('#email', 'Vui lòng nhập địa chỉ Email'),
-              pwMinLength('#password', 6, 'Mật khẩu tối thiểu 6 ký tự'),
-              isConfirmed('#password-confirmation', function() {
-                return document.querySelector('#form-1 #password').value;
-              }, 'Mật khẩu nhập lại không chính xác')
-            ]
-          })    
-    
-        </script>
+        <script src="../myjs/form-validation.js"></script>
 </body>
 </html>
