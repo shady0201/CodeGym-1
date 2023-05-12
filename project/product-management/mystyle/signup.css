@@ -9,7 +9,7 @@ body{
   background-image: url("../images/background.jpg");
   background-attachment: fixed;
   background-size: cover;
-  height: 100vh;
+  max-height: 100vh;
 }   
 
 .anh{
@@ -32,8 +32,6 @@ body{
   text-align: center;
   color: #FFFFFF;
   padding: 25px 0px 15px;
-  font-style: normal;
-  font-weight: normal;
   letter-spacing: 0.1px;
   width: 100%;
   bottom: 0;
