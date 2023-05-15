@@ -1,39 +1,26 @@
-// function temperatureConverter(num){
-//     let numBer = parseFloat(num);
-//     document.getElementById("outputCelsius").innerHTML = (numBer-32) / 1.8;
-
+// function f() {
+//    if ( true ) {
+//       var a = 10;
+//       let b = 10;
+//       const c = 10;
+//    }
+//       console.log(a); // ko loi
+//       console.log(b); // loi
+//       console.log(c); // loi
 // }
 
-// function minArray(arr) {
-//     if(arr.length == 0)
-//         return -1;
+// f();
+// console.log(a); // loi
+// console.log(b); // loi  
+// console.log(c); // loi  
 
-//     let min = arr[0]
-//     let index_min = [0];
-    
-//     for(let i = 1; i < arr.length; i++){
-//         if(arr[i] < min){
-//             min = arr[i];
-//             index_min = [i];
-//         }
-//         else if (min === arr[i]) {
-//             index_min.push(i);
-//         }
-//     }
-//     return index_min;
-// }
+// let arr = [1,2,3,4];
+// let sum = 0
+// arr.map(item => {
+//    sum += item;
+// })
+// console.log(sum);
 
-// let arr1 = [-1, 12, 6, -1, 20, -1, 56, -1];
-// // let arr2 = arr1.filter(x => x != -1)
-// let min = minArray(arr1)
-// console.log(min);
-
-    function tbLeHam(arr){
-       for ( let i = 0; i < arr.length; i++) {
-        tong += arr[i]
-       }
-    return tong 
-    }  
-    let arr = document.getElementById('input14').value.split(',').map(Number);
-    let tong = 0
-    document.write(tbLeHam(arr))
+const numbers = [1, 2, 3, 4, 5, 6, 10, 50, 17, 22];
+const oddNumbers = numbers.filter(num => num % 5 === 2 && num > 2);
+console.log(oddNumbers); 

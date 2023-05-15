@@ -120,7 +120,7 @@ function renderItem(){
             </div>`;
         itemWrap.innerHTML += cardHtml;
     }
-}
+}   
 
 function cardMouseIn(id, animName, active){
     let card = document.querySelector('#card-' + id);
