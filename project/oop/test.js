@@ -1,41 +1,41 @@
-// class Animal{
-//     #hungry = 100
-//     constructor(gender, age) {
-//         this.gender = gender;
-//         this.age = age;    
-//     }
+class Animal{
+    #hungry = 100
+    constructor(gender, age) {
+        this.gender = gender;
+        this.age = age;    
+    }
 
-//     eat(food) {
-//         if ( this.hungry + food > 100) {
-//            return;
-//         }
-//         this.hurry += food
-//     }
+    eat(food) {
+        if ( this.hungry + food > 100) {
+           return;
+        }
+        this.hurry += food
+    }
 
-//     talk() {
-//         console.log('');
-//     }
-// }
+    talk() {
+        console.log('');
+    }
+}
 
-// class Cat extends Animal{
-//     talk() { 
-//         console.log("Meow"); 
-//     } 
+class Cat extends Animal{
+    talk() { 
+        console.log("Meow"); 
+    } 
         
-// }
+}
 
-// class Dog extends Animal{
-//     talk() { 
-//         console.log("Gou"); 
-//     } 
+class Dog extends Animal{
+    talk() { 
+        console.log("Gou"); 
+    } 
 
-// }
+}
 
-// let myCat = new Cat("male", 25)
-// let myDog = new Dog("female", 30)
+let myCat = new Cat("male", 25)
+let myDog = new Dog("female", 30)
 
-// myCat.talk()
-// myDog.talk()
+myCat.talk()
+myDog.talk()
 
 
 // function bt2(){

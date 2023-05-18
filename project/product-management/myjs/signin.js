@@ -2,7 +2,7 @@ let listUser = JSON.parse(localStorage.getItem('listUser')) || [];
 
 document.getElementById('form-1').addEventListener('submit', function(event) {
     event.preventDefault(); 
-    register();
+    login();
 });
 
 function getUsersFromLocalStorage() {
