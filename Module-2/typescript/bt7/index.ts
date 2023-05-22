@@ -31,9 +31,6 @@ class Product { // class pojo: biểu dien du lieu
 class ManageProduct { // class Manage: quản lý
     private listProduct: Product[] = [];
 
-    constructor() {
-    }
-
     add(product: Product) {
         this.listProduct.push(product)
     }
@@ -47,11 +44,17 @@ class ManageProduct { // class Manage: quản lý
     }
 
     delete(id: string) {
-        this.listProduct = this.listProduct.filter(item => item.getId() !== id);
-        // this.listProduct.splice(id, 1)
+        // this.listProduct = this.listProduct.filter(item => item.getId() !== id);
+        for (let i = 0; i < this.listProduct.length; i++) {
+            let product = this.listProduct[i];
+
+            if ( product.getId() == id) {
+                this.listProduct.splice(i, 1); 
+            }
+        }
     }
 
-    show() {
+    show(): void {
         console.table(this.listProduct)
     }
 
@@ -81,13 +84,13 @@ mp.add(new Product('2', 'SS', 200, 50));
 mp.add(new Product('3', 'IS', 500, 60));
 // mp.edit('2', new Product('3', 'SS', 2000, 50));
 // mp.show();
-// mp.delete('1')
-// mp.show();
+mp.delete('1')
+mp.show();
 
-let codeFound = mp.findProductByCode('IP');
-let mbFound = mp.searchProduct('I');
-let countPrice = mp.countProduct(50);
-console.log(codeFound);
-console.log(mbFound);
-console.log(countPrice);
-console.log(mp.get(1).getPrice());
+// let codeFound = mp.findProductByCode('IP');
+// let mbFound = mp.searchProduct('I');
+// let countPrice = mp.countProduct(50);
+// console.log(codeFound);
+// console.log(mbFound);
+// console.log(countPrice);
+// console.log(mp.get(1).getPrice());

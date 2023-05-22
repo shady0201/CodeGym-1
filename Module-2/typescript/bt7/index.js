@@ -35,10 +35,13 @@ var ManageProduct = /** @class */ (function () {
     };
     ManageProduct.prototype.delete = function (id) {
         this.listProduct = this.listProduct.filter(function (item) { return item.getId() !== id; });
-        this.listProduct.splice(id, 1);
+        // this.listProduct.splice(id, 1)
     };
     ManageProduct.prototype.show = function () {
         console.table(this.listProduct);
+    };
+    ManageProduct.prototype.get = function (index) {
+        return this.listProduct[index];
     };
     ManageProduct.prototype.findProductByCode = function (name) {
         var foundProduct = this.listProduct.find(function (item) { return item.getName() === name; });
@@ -68,3 +71,4 @@ var countPrice = mp.countProduct(50);
 console.log(codeFound);
 console.log(mbFound);
 console.log(countPrice);
+console.log(mp.get(1).getPrice());
