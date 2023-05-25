@@ -1,10 +1,20 @@
 function Validator(options) {
 
+    var selectorRules = {};
+
     function validate(inputElement, rule) {
-        var errorMessage = rule.announce(inputElement.value);
         var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
-        console.log(errorElement);
-                        
+        var errorMessage;
+        
+        // Lấy ra các rules của selector
+        var rules = selectorRules[rule.selector];
+
+        // Lặp qua từng rule và kiểm tra
+        for (var i = 0; i < rules.length; i++) {
+            errorMessage = rules[i](inputElement.value);
+            if (errorMessage) break;
+        }
+
         if ( errorMessage ) {
             errorElement.innerText = errorMessage;
             errorElement.classList.add('invalid');
@@ -17,26 +27,50 @@ function Validator(options) {
         }
     }
 
+    // Lấy element của form cần validate
     var formElement = document.querySelector(options.form); 
+        if (formElement) {
+            // Khi submit form
+            formElement.onsubmit = (e) => {
+                e.preventDefault();
+                options.rules.forEach((rule) => {
+                    var inputElement = formElement.querySelector(rule.selector);
+                    validate(inputElement, rule);         
+                })
+            }
 
-        if ( formElement ) {
+            // Lặp qua mỗi rule và xử lý sự kiện 
             options.rules.forEach(function (rule){
+
+                // Lưu lại các rules cho mỗi input
+                if (Array.isArray(selectorRules[rule.selector])) {
+                    selectorRules[rule.selector].push(rule.announce); 
+                }
+
+                else {
+                    selectorRules[rule.selector] = [rule.announce];
+                }
+
                 var inputElement = formElement.querySelector(rule.selector);
                 var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
                 
-                if ( inputElement ) {
+                if (inputElement) {
+                    
+                    // Xử lý trường hợp blur khỏi input
                     inputElement.onblur = function() {
                         validate(inputElement, rule);        
                     }
 
+                    // Xư lý mỗi khi user nhập vào input
                     inputElement.oninput = function() {
                         errorElement.innerText = '';
                         errorElement.classList.remove('invalid');
                         inputElement.classList.remove('border-invalid');
                     }
                 }
-            });     
-            
+            });        
+
+            console.log(selectorRules); 
         }   
 }
 
@@ -58,15 +92,6 @@ function isEmail(selector, message) {
         }
     }    
 }
-
-// function isRequiredPass(selector, message) {
-//     return {
-//         selector : selector,
-//         announce: function(value) {
-//             return value.trim() ? undefined : message 
-//         }
-//     }
-// }
 
 function pwMinLength(selector, min, message) {
     return {

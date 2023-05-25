@@ -1,0 +1,44 @@
+@mixin section {
+    min-height: 100vh;
+    padding: 10rem 7% 2rem;
+}
+
+@mixin home {
+    display: flex;
+    align-items: center;
+}
+
+@mixin socialMedia {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: transparent;
+    border: .2rem solid $main-color;
+    border-radius: 50%;
+    box-shadow: 0px 1px 1px 1px $shadow-color;
+    font-size: 2rem;
+    color: $main-color; 
+    margin : 1rem 1rem 1.5rem 0;
+    transition: 0.5s ease;
+}
+
+@mixin button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: $main-color;
+    color: $white-color;
+    border-radius: 6px;
+    transition: 0.5s ease;
+    letter-spacing: 0.1rem;
+    border: .2rem solid transparent;
+    font-weight: 600;
+}
+
+@mixin buttonHover {
+    background: transparent;
+    color: $main-color;
+    box-shadow: 0px 1px 8px 2px $shadow-color;
+    border-color: $main-color;
+}

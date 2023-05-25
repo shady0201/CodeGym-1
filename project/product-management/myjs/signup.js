@@ -31,7 +31,12 @@ function register() {
     let email = document.getElementById('email').value.trim();
     let pass = document.getElementById('password').value.trim();
     let passConfirm = document.getElementById('password-confirmation').value.trim();
-    
+
+    if (usn === '' || email === '' || pass === '' || passConfirm === '') {
+        document.getElementById('alert').innerHTML = `<p><img src="../images/alert.jpeg"><span> Vui lòng nhập đầy đủ thông tin </span></p>`;
+        return;
+    }
+
     if (pass !== passConfirm) {
         document.getElementById('alert').innerHTML = `<p><img src="../images/alert.jpeg"><span> Mật khẩu không khớp</span></p>`;
         return;

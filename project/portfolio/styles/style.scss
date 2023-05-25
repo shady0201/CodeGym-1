@@ -1,0 +1,138 @@
+/* Google Font Import - Poppins */
+$bg-color: #fdfdfd;
+$text-color: #333;
+$main-color: #754ef9;
+$white-color: #fdfdfd;
+$shadow-color: rgba(0, 0, 0, .2);
+
+@import 'header';
+@import 'mixinHeader';
+@import 'mixinBody';
+@import 'darkMode';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+   text-decoration: none; 
+   border: none;
+   outline: none;
+}
+
+html {
+    font-size: 90%;
+    overflow: hidden; 
+}
+
+body {
+    background: $bg-color;
+    color: $text-color;
+    text-rendering: optimizeSpeed;
+}
+
+.logo {
+  @include logo();
+}
+
+.navbar {
+    a {
+        @include navbar();
+    }
+}   
+
+.navbar {
+    a.active::before {
+        @include navbarActive();
+    }
+}
+
+section {
+    @include section();
+}
+
+.home {
+    @include home();
+}
+
+.home {
+    .home-content {
+        max-width: 50rem;
+    }
+}
+
+.home {
+    h3 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        line-height: .3;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+    
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+.home-content {
+    .social-media {
+        a {
+         @include socialMedia();
+        }
+    }
+}
+
+.home-content {
+    .social-media {
+        a:hover {
+            background: $main-color;
+            color: $white-color;
+        }
+    }
+}
+
+.btn {
+    @include button();
+}
+
+.btn:hover {
+    @include buttonHover();
+}
+
+.home {
+    .profession-container {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background: transparent;
+        transform: translateY(-50%);
+        width: 800px;
+        height: 800px;
+        overflow: hidden;
+        pointer-events: none;
+    }
+}
+
+.home {
+    .profession-container {
+        .profession-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: purple;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    }
+}

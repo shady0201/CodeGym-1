@@ -21,7 +21,7 @@ class CongNhan extends CanBo {
 
     constructor ( name : string, age : number, gender : string, adress: string, bac: number) {
         super(name, age, gender, adress);
-        this.bac = bac;
+        this.bac = name;
     }
     
     displayCongNhan() {

@@ -100,6 +100,16 @@ let projectList = [
         id : 10,
     },
 
+    {   
+        title : 'Algorithm',
+        desc : 'Bài tập thuạt toán',
+        url : '/project/algorithm/signin.html',
+        icon : 'fa-solid fa-bezier-curve',
+        anim : 'ring-beat',
+        bcolor : '#e53a1091',
+        id : 11,
+    },
+    
 ]
 renderItem();
 
