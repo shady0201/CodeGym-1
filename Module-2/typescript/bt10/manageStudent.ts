@@ -34,7 +34,7 @@ export class ManageStudent {
         console.table(this.listStudent)
     }
     
-    delete() {
+    delete(): void {
         let index = readlineSync.question(`Nhap vao vi tri sinh vien muon xoa: `);
         this.listStudent.splice(index, 1);
     }   

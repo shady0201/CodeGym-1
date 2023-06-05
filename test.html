@@ -8,27 +8,28 @@
     
 </head>
 <body>
-
-    <script>
-      function check5K(number){
-      if(number === 1 || number === 5) {
-          return true;
-      }
-
-      if(number % 5 != 0) {
-          return false;
-      }
-  
-      return check5K( number / 5 )    
-    }
-
-      let arr = [1, 2, 3, 25, 125, 625, 10, 60];
-      for(let i = 0; i < arr.length; i++){
-          if(check5K(arr[i])){
-              // document.write(arr[i] + "</br>")
-          }
-      }
-    </script>
+  <div class="box"></div>
+    
 
 </body>
+<script>
+  function check5K(number){
+  if(number === 1 || number === 5) {
+      return true;
+  }
+
+  if(number % 5 != 0) {
+      return false;
+  }
+
+  return check5K( number / 5 )    
+}
+
+  let arr = [1, 2, 3, 25, 125, 625, 10, 60];
+  for(let i = 0; i < arr.length; i++){
+      if(check5K(arr[i])){
+          // document.write(arr[i] + "</br>")
+      }
+  }
+</script>
 </html>
