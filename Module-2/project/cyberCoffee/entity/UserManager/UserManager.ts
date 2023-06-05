@@ -89,7 +89,7 @@ export class UserManager {
         let clientIndex: number = ComputerManager.findComputerByIndex(id);
 
         if (clientIndex >=0) {
-            let client: Computer = ComputerManager.getList()[clientIndex];
+            let client = ComputerManager.getList()[clientIndex];
             
             if (password === user.getPassword() && !user.getOnline() && client.getUsedBy() === null) {
                 client.login(userName);
