@@ -31,21 +31,25 @@ export class ComputerManager {
 
     static addComputer(numberOfComputerWantToBuy: number, name: string): void {
       for (let i: number = 0; i < numberOfComputerWantToBuy; i++) {
-        let indexName = name + this.currentName
+        let indexName = name + ' ' + this.currentName
         this.listComputer.push(new Computer(this.currentName, indexName));
         console.log(`"${indexName}" có ID "${this.currentName}" đã được thêm`);
-        this.currentName++;
+        this.currentName++;   
       }
     }
 
     static showOnlineComputers(): void {
-      const onlineComputers = this.listComputer.filter((computer) => computer.getUsedBy());
-      console.log('Danh sách máy tính đang Online:');
-      console.table(onlineComputers);
+      let onlineComputers = this.listComputer.filter((computer) => computer.getUsedBy());
+      if (onlineComputers.length > 0) {
+        console.log('Danh sách máy tính đang Online:');
+        console.table(onlineComputers);
+      } else {
+        console.log('Không có máy tính nào đang Online');   
+      }
     }
   
     static showOfflineComputers(): void {
-      const offlineComputers = this.listComputer.filter((computer) => !computer.getUsedBy());
+      let offlineComputers = this.listComputer.filter((computer) => !computer.getUsedBy());
       console.log('Danh sách máy tính đang Offline:');
       console.table(offlineComputers);
     }
@@ -102,7 +106,7 @@ export class ComputerManager {
     }
 }
 
-new ComputerManager()
+// new ComputerManager()
 // ComputerManager.addComputer(3, 'Computer ');
 // ComputerManager.editComputer(8, 'Quynh')
 // ComputerManager.removeComputer()

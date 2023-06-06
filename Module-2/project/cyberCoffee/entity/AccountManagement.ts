@@ -10,7 +10,20 @@ export class AccountManagement {
     }
 
     static showUserCashRegister(){
-        console.log(this.listAccount);
+        console.table(this.listAccount);
+    }
+
+    // static accountExists(id: number) {
+    //     for(let i=0; i<this.listAccount.length; i++) {
+    //       if(this.listAccount[i].get_id() === id) {
+    //         return true;
+    //       }
+    //     }
+    //     return false;
+    // }
+
+    static accountExists(id: number): boolean {
+        return this.listAccount.some(account => account.get_id() === id);
     }
 
     static login(userName: string, passWord: string) {
@@ -23,21 +36,24 @@ export class AccountManagement {
         }
     
         if (!userLogin) {
-            console.log('Invalid username or password');
+            console.log('Sai tài khoản hoặc mật khẩu');
         } else {
-            console.log('Welcome ' + userLogin.get_username());
+            console.log(`Xin chào "${userLogin.get_username()}"`);
         }
     }
     
-    static regisration(id: number, userName: string, passWord: string) {
-        let newAccount = new CashRegister(id, userName, passWord)    
-
+    static register(id: number, userName: string, passWord: string) {
         for (let i = 0; i < this.listAccount.length; i++) {
             if (this.listAccount[i].get_username() == userName && this.listAccount[i].get_id() == id) {
-                console.log('Tài khoản đã có người sử dụng');              
+                console.log(`Tài khoản "${userName}" đã có người sử dụng`);              
+                return;
+            }
+            if (this.listAccount[i].get_username() === '') {
+                console.log(`Bạn chưa nhập Username`);              
                 return;
             }
         }
+        let newAccount = new CashRegister(id, userName, passWord)   
         this.listAccount.push(newAccount);     
         console.log(`Thêm tài khoản với Username "${userName}" thành công!`) 
     }
@@ -53,7 +69,7 @@ export class AccountManagement {
 
     static editAccount() {
         let id = +readlineSync.question('Nhap vao so ID can sua: ');
-      
+
         let indexComputer = this.findAccountByIndex(id);
         
         if (indexComputer >= 0) {

@@ -9,11 +9,11 @@ enum CaseName {
 }
 
 // create account
-console.log('create account')
-UserManager.createAccount('a', '1', 10000)
-UserManager.createAccount('b', '1', 15000)
-UserManager.createAccount('c', '1', 17000)
-console.log('------------------------------------------------')
+// console.log('create account')
+// UserManager.createAccount('a', '1', 10000)
+// UserManager.createAccount('b', '1', 15000)
+// UserManager.createAccount('c', '1', 17000)
+// console.log('------------------------------------------------')
 
 //buy pc
 // console.log('buy PC')
@@ -21,11 +21,11 @@ console.log('------------------------------------------------')
 // console.log('--------------------------------')
 
 // check login
-console.log('check login')
-UserManager.login('a', '1', 1)
-UserManager.login('c', '1', 2)
-UserManager.logoff('a')
-console.log('------------------------------------------')
+// console.log('check login')
+// UserManager.login('a', '1', 1)
+// UserManager.login('c', '1', 2)
+// UserManager.logoff('a')
+// console.log('------------------------------------------')
 
 // // check info of user list
 // // console.log('check info of user list')

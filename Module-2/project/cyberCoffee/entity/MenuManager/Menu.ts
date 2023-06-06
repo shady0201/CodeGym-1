@@ -1,36 +1,35 @@
 export class Menu {
-    private _id: number
-    private _nameService: string
-    private _price: number
+    private id: number
+    private nameService: string
+    private price: number
 
     public get_id(): number {
-        return this._id;
+        return this.id;
     }
 
-    public set_id(_id: number): void {
-        this._id = _id;
+    public set_id(id: number): void {
+        this.id = id;
     }
 
     public get_nameService(): string {
-        return this._nameService;
+        return this.nameService;
     }
 
-    public set_nameService(_nameService: string): void {
-        this._nameService = _nameService;
+    public set_nameService(nameService: string): void {
+        this.nameService = nameService;
     }
 
     public get_price(): number {
-        return this._price;
+        return this.price;
     }
 
-    public set_price(_price: number): void {
-        this._price = _price;
+    public set_price(price: number): void {
+        this.price = price;
     }
-
 
     constructor(id: number, nameService: string, price: number) {
-        this._id = id
-        this._nameService = nameService
-        this._price = price
+        this.id = id
+        this.nameService = nameService
+        this.price = price
     }
 }

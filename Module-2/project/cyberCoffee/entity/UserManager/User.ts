@@ -60,6 +60,6 @@ export class User {
     }
 
     decreaseMoneyByTime(): void {
-        this.money -= this.getOnlineTime() * 10000 / 3600 // about 166 money per sec
+        this.money -= this.getOnlineTime() * 10000 / 36000 * 5 // about 3,32 money per sec
     }
 }

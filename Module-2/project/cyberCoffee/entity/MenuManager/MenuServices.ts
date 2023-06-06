@@ -20,18 +20,18 @@ export class MenuServices {
     }
     
     static addMenuServices() {
-        let totalServices = readlineSync.question('Nhap vao so luong Services can them: ');
+        let totalServices = +readlineSync.question('Nhap vao so luong Services can them: ');
         for (let i = 1; i <= totalServices; i++) {
             
-            let idService = parseFloat(readlineSync.question(`Nhap vao ID Services ${i}: `));
+            let idService = parseFloat(readlineSync.question(`Nhap vao ID Services thu ${i}: `));
             let myService = this.findServiceById(idService);
             if (myService !== undefined) {
-                console.log("Service đã tồn tại!");
+                console.log(`ID Service "${idService}" đã tồn tại!`);
                 return; 
             }
 
             let nameService = readlineSync.question(`Nhap vao ten Service: `);
-            let priceService = parseFloat(readlineSync.question('Nhap vao gia tien: '));
+            let priceService = +readlineSync.question('Nhap vao gia tien: ');
             let menuServices = new Menu(idService, nameService, priceService);     
 
             this.listMenu.push(menuServices)

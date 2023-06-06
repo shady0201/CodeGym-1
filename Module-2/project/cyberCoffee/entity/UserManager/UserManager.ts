@@ -1,6 +1,7 @@
 import { User } from "./User";
 import { ComputerManager } from "../ComputerManager/ComputerManager";
 import { Computer } from "../ComputerManager/Computer";
+let readlineSync = require('readline-sync');
 
 export class UserManager {
     private static listUser: User[] = [];
@@ -12,7 +13,7 @@ export class UserManager {
                                  new User('Test', '123', 1000))
     }
 
-    static showList() {
+    static showListUser() {
         console.table(this.listUser);
     }
 
@@ -35,6 +36,31 @@ export class UserManager {
             ? console.log(`Tài khoản "${name}" đã tồn tại`)
             : (this.listUser.push(new User(name, password, money, email, age, address, gender)),
                 console.log(`Tài khoản "${name}" đã được tạo`));
+    }
+
+    static deleteAccount(name: string): void {    
+        let indexAccount = this.getIndexByName(name);
+
+        if (indexAccount >= 0) {
+        
+            console.log(`Bạn có chắc chắn muốn xóa "${this.listUser[indexAccount].getName()}" không?`);
+            console.log("Nhap 1 để xóa, 0 để hủy.");
+        
+            let choice = +readlineSync.question('Lua chon: ');
+        
+            if (choice === 1) {
+                console.log(`Đã xóa thành công User "${this.listUser[indexAccount].getName()}".`);
+                this.listUser.splice(indexAccount, 1);       
+                UserManager.showListUser();
+                return;
+            } 
+            
+            if (choice === 0) {
+                console.log("Hủy thao tác xóa User.");
+            } else {
+                console.log("Lựa chọn không hợp lệ!");
+            }
+        }       
     }
 
     static getSize(): number {
@@ -97,11 +123,11 @@ export class UserManager {
                 console.log(`Tài khoản "${userName}" đăng nhập thành công vào "Computer ${id}"`);
                 return true;
             } else if (password !== user.getPassword()) {
-                console.log(`Sai mật khẩu (from UserManager.login)`);
+                console.log(`Sai mật khẩu`);
             } else if (user.getOnline()) {
-                console.log(`Tài khoản đang được sử dụng (from UserManager.login)`);
+                console.log(`Tài khoản đang được sử dụng`);
             } else {
-                console.log(`Tài khoản đang được sử dụng (from UserManager.login)`);
+                console.log(`Tài khoản đang được sử dụng`);
             }
          }
     }
@@ -146,19 +172,19 @@ export class UserManager {
     }
 }
 
-new UserManager();
+// new UserManager();
 // UserManager.getIndexByName('Quynh');
 // UserManager.getMoneyByName('Quynh');
 // UserManager.setMoneyByName('Quynh', 10000);
 // UserManager.addMoneyByName('Quynh', 2000);
 // UserManager.getPasswordByName('Quynh');
 // UserManager.setPasswordByName('Quynh', 'gia')
-UserManager.login('Hoang Anh','123', 3)
-UserManager.login('Quynh', '123', 2)
-UserManager.logoff('Quynh')
-UserManager.showList()
+// UserManager.login('Hoang Anh','123', 3)
+// UserManager.login('Quynh', '123', 2)
+// UserManager.logoff('Quynh')
+// UserManager.showList()
 // ComputerManager.showOnlineComputers()
 // ComputerManager.showOfflineComputers()
-UserManager.getOnlineTimeComputerByName('Hoang Anh')
+// UserManager.getOnlineTimeComputerByName('Hoang Anh')
 // UserManager.getOnlineTimeByName('Hoang Anh')
 // UserManager.logoff('Quynh')
