@@ -156,7 +156,7 @@ while (choice !== 0) {
                         
                         if (choiceUser == 1) {
         
-                                let nameUser = readlineSync.question('Nhap vao Username: ');
+                                let username = readlineSync.question('Nhap vao Username: ');
                                 let password = readlineSync.question('Nhap vao password: ');
                                 let money: number = +readlineSync.question('Nhap vao so tien: ');
 
@@ -199,7 +199,7 @@ while (choice !== 0) {
                                             break
                                     }
                                 }
-                                UserManager.createAccount(nameUser, password, money, email, age, address, gender)
+                                UserManager.createAccount(username, password, money, email, age, address, gender)
                             }
                         if (choiceUser == 2) {  
                             console.log('Chọn một trong các lựa chọn sau:');
