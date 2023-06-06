@@ -67,11 +67,9 @@ while (choice !== 0) {
                 '\n 3. Sửa đổi thông tin của máy' +
                 '\n 4. Xóa một máy ra khỏi danh sách' +
                 '\n 5. Thêm dịch vụ' +
-                '\n 6. Chỉnh sửa tính tiền theo giờ' +
-                '\n 7. Tính tiền' +
-                '\n 8. Quản lý tài khoản đăng nhập' +
-                '\n 9. Doanh thu' +
-                '\n 10. Đăng xuất' +
+                '\n 6. Quản lý tài khoản đăng nhập' +
+                '\n 7. Doanh thu' +
+                '\n 8. Đăng xuất' +
                 '\n 0. Thoát');
                     
             choiceMenu = parseInt(readlineSync.question('Lua chon cua ban: '), 10); 
@@ -137,14 +135,6 @@ while (choice !== 0) {
                     break;
 
                 case 6:
-                    // choice 6
-                    break;
-
-                case 7:
-                    // choice 7
-                    break;
-
-                case 8:
                     let choiceUser = -1;
 
                     while (choiceUser != 0) {
@@ -277,6 +267,7 @@ while (choice !== 0) {
 
                         if (choiceUser == 11) {  
                             UserManager.decreaseMoneyByTime();
+                            UserManager.showListUser();
                         }
 
                         if (choiceUser == 12) {  
@@ -286,10 +277,10 @@ while (choice !== 0) {
                     }
                     break;
             
-                case 9:
+                case 7:
                     break;
 
-                case 10:
+                case 8:
                     console.log('Bạn đã đăng xuất thành công!');
                     choiceMenu = 0;
                     break;
