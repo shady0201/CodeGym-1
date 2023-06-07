@@ -1,4 +1,4 @@
-import { AccountManagement } from "../entity/AccountManagement";
+import { AccountManagement } from "./AccountManagement";
 import { ComputerManager } from "../entity/ComputerManager/ComputerManager";
 import { MenuServices } from "../entity/MenuManager/MenuServices";
 import { UserManager } from "../entity/UserManager/UserManager";
