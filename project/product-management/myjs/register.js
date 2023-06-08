@@ -2,9 +2,9 @@ var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext("2d");
 context.font = "50px Arial";
 context.strokeStyle = "blue";
-context.strokeText("Đăng ký thành công!", 30, 50);
+context.strokeText("Just A 2`!", 30, 50);
 
-var seconds = 5;
+var seconds = 500;
 $('#countdown').html(seconds);
 var countdown = setInterval(function() {
     seconds--;
