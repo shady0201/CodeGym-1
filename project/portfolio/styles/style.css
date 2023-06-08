@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.darkMode-icon {
+  font-size: 1.8rem;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  font-size: 80%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #fdfdfd;
+  color: #333;
+  text-rendering: optimizeSpeed;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #754ef9;
+  font-weight: 600;
+  cursor: default;
+  margin-right: auto;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 1.2rem;
+  color: blue;
+  font-weight: 500;
+  margin-right: 3rem;
+}
+
+.navbar a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -6px;
+  height: 0.1rem;
+  background: blue;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 7% 2rem; 
+}
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.home .home-content {
+  max-width: 50rem;
+}
+
+.home h3 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 0.3;
+}
+.home h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.home p {
+  font-size: 1.1rem;
+}
+
+.home-content .social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: transparent;
+  border: 0.2rem solid #754ef9;
+  border-radius: 50%;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  color: #754ef9;
+  margin: 1rem 1rem 1.5rem 0;
+  transition: 0.5s ease;
+}
+
+.home-content .social-media a:hover {
+  background: #754ef9;
+  color: #fdfdfd;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #754ef9;
+  color: #fdfdfd;
+  border-radius: 6px;
+  transition: 0.5s ease;
+  letter-spacing: 0.1rem;
+  border: 0.2rem solid transparent;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #754ef9;
+  box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.2);
+  border-color: #754ef9;
+}
+
+.home .profession-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background: transparent;
+  transform: translateY(-50%);
+  width: 800px;
+  height: 800px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.home .profession-container .profession-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .profession-box .profession {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #754ef9;
+  transform: rotate(calc(90deg * var(--i)));
+  transform-origin: 400px;
+  padding: 13px 0;
+  background: #fdfdfd;
+}
+
+.home .profession-box .profession:nth-child(1) {
+  margin-left: 55px;
+}
+
+.home .profession-box .profession:nth-child(2) {
+  margin-top: 135px;
+}
+
+.home .profession-box .profession:nth-child(3) {
+  margin-left: -65px;
+}
+
+.home .profession-box .profession:nth-child(4) {
+  margin-top: -135px;
+}
+
+.home .profession-box .profession:nth-child(2),
+.home .profession-box .profession:nth-child(4) {
+  padding-bottom: 15px;
+}
+
+.home .profession-box i {
+  font-size: 3.2rem;
+}
+
+.home .profession-box h3 {
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.home .profession-box .circle {
+  width: 450px;
+  height: 450px;
+  border: 3px solid #754ef9;
+  border-radius: 50%;
+}
+
+.home .profession-container .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 400px solid #754ef9;
+  border-right: 400px solid #754ef9;
+  border-bottom: 400px solid #754ef9;
+  border-left: 400px solid transparent;
+}
+
+.home-img img {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+}/*# sourceMappingURL=style.css.map */

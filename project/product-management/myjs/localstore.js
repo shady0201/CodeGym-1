@@ -1,6 +1,6 @@
 class MyLocalData{
     products = []
-
+    
     findProductByCode(code){
         let foundProduct = this.products.find(card => card.code === code);
         return foundProduct;
@@ -11,14 +11,17 @@ class MyLocalData{
         if (search.length > 3) {
             result = this.products.filter(product => product.code.includes(search));
         } 
-        for (let i = 0; i < this.products.length; i++) {
-            let product = this.products[i];
-
-            if (product.name.toLowerCase().includes(search.toLowerCase()) ||  product.name.includes(search) )
-            {
-                result.push(product);
-            }
+        else {
+            result = this.products.filter(product => product.name.toLowerCase().includes(search.toLowerCase()) ||  product.name.includes(search));
         }
+        // for (let i = 0; i < this.products.length; i++) {
+        //     let product = this.products[i];
+
+        //     if (product.name.toLowerCase().includes(search.toLowerCase()) ||  product.name.includes(search) )
+        //     {
+        //         result.push(product);
+        //     }
+        // }
         return result;
     }
 
@@ -47,7 +50,6 @@ class MyLocalData{
                 this.products.splice(i, 1); 
             }
         }
-
         this.saveProducts();
     }
 

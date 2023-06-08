@@ -20,7 +20,7 @@ searchSidebar.addEventListener('click', function() {
 });
 
 window.addEventListener('load', function() {
-    sidebar.classList.remove('close');
+    sidebar.classList.toggle('close');
 })
 
 let logoutYes = document.querySelector('.yes')

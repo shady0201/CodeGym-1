@@ -1,0 +1,64 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.head-wrap{
+    display: flex;
+    margin: 10px;
+    max-width: auto;
+    text-align: left;
+    background-color: #282781;
+    text-decoration: none;
+}
+
+.head-img{
+    margin-bottom: -5px;
+    height: 55px;
+}
+
+header{
+    margin-bottom: -10px;
+}
+.bt{
+   padding: 20px; 
+   border: 1px solid;
+   margin-bottom: 40px;
+   background-color: rgb(244, 233, 218);
+   margin: 10px;  
+}
+
+p{
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.backicon{
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.backbutton{
+    font-size: 18px;
+    color: blue; 
+    text-decoration: none;  
+}
+
+.head-button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 10px 0px 10px;
+}
+
+.btn{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.result{
+    margin-top: 10px;
+}
+
+

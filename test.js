@@ -1,39 +1,71 @@
-// function temperatureConverter(num){
-//     let numBer = parseFloat(num);
-//     document.getElementById("outputCelsius").innerHTML = (numBer-32) / 1.8;
-
-// }
-
-// function minArray(arr) {
-//     if(arr.length == 0)
-//         return -1;
-
-//     let min = arr[0]
-//     let index_min = [0];
-    
-//     for(let i = 1; i < arr.length; i++){
-//         if(arr[i] < min){
-//             min = arr[i];
-//             index_min = [i];
-//         }
-//         else if (min === arr[i]) {
-//             index_min.push(i);
-//         }
+// function changeMoney(money) {
+//     let coins = [5000, 8000, 1000];
+//     coins.sort((a, b) => b - a );
+//     let result = [];
+  
+//     for (let i = 0; i < coins.length; i++) {
+//       while (coins[i] <= money) {
+//         result.push(coins[i]);
+//         money -= coins[i];
+//       }
 //     }
-//     return index_min;
+  
+//     if (money === 0) {
+//       return result;
+//     } else {
+//       return "Không thể đổi số tiền này";
+//     }
+// }
+  
+// console.log(changeMoney(12000));
+  
+// let arr =  [8, 5, 1]
+// let n = 10
+// let count = 0
+
+// for (let i = 0; i < arr.length; i++) {
+//     count = Math.floor(n/arr[i])
+//     n = n - Math.floor(n/arr[i])*arr[i]
+//     console.log((arr));
 // }
 
-// let arr1 = [-1, 12, 6, -1, 20, -1, 56, -1];
-// // let arr2 = arr1.filter(x => x != -1)
-// let min = minArray(arr1)
-// console.log(min);
+// console.log(count);
 
-    function tbLeHam(arr){
-       for ( let i = 0; i < arr.length; i++) {
-        tong += arr[i]
-       }
-    return tong 
-    }  
-    let arr = document.getElementById('input14').value.split(',').map(Number);
-    let tong = 0
-    document.write(tbLeHam(arr))
+// function countOccurrences(arr) {
+//     let markArray = new Array(arr.length).fill(false);
+//     let result = {};
+    
+//     for (let i = 0; i < arr.length; i++) {
+//       if (!markArray[i]) {
+//         let count = 1;
+//         for (let j = i + 1; j < arr.length; j++) {
+//           if (arr[j] === arr[i]) {
+//             count++;
+//             markArray[j] = true;
+//           }
+//         }
+//         result[arr[i]] = count;
+//       }
+//     }
+    
+//     return result;
+// }
+
+// for ( let i = 1; i < 10; i++){
+// 
+//   console.log(i--)
+//   if ( i-- == 0 ) {
+  
+//     break;
+//   }
+// }
+
+// for (let i = 0; i < 1; i++){
+//   for ( let j = 0; j < 5; j++){
+//     for( let x = 0; x < 4; x++)
+//       if ( x == 0){
+//         console.log(1);
+//         break;    
+//     }
+//   }
+// }

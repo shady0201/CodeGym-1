@@ -100,32 +100,42 @@ let projectList = [
         id : 10,
     },
 
+    {   
+        title : 'Algorithm',
+        desc : 'Bài tập thuạt toán',
+        url : '/project/algorithm/signin.html',
+        icon : 'fa-solid fa-bezier-curve',
+        anim : 'ring-beat',
+        bcolor : '#e53a1091',
+        id : 11,
+    },
+    
 ]
 renderItem();
-
-function renderItem(){
-    let itemWrap = document.getElementsByClassName("card-wrap")[0];
-    for (let i = 0; i < projectList.length; i++) {
-        let { icon, title, desc, url, anim, id, bcolor } = projectList[i];
-        let cardHtml = 
-            `<div id="card-${id}" onmouseenter="cardMouseIn(${id}, '${anim}', true)" onmouseleave="cardMouseIn(${id}, '${anim}', false)" class="card">
-                <div class="img-wrap" style="background-color:${bcolor}">
-                    <i class="${icon}"></i>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">${title}</h5>
-                    <p class="card-text">${desc}</p>
-                    <a href="${url}" class="btn btn-primary" style="width:250px">Xem</a>
-                </div>
-            </div>`;
-        itemWrap.innerHTML += cardHtml;
-    }
-}
 
 function cardMouseIn(id, animName, active){
     let card = document.querySelector('#card-' + id);
     let icon = card.querySelector('i');
     icon.classList.toggle(animName, active);
+}
+
+function renderItem() {
+    let itemWrap = document.getElementsByClassName("card-wrap")[0];
+    let cardsHtml = projectList.map(function (product){
+        let { icon, title, desc, url, anim, id, bcolor } = product;
+        return `
+        <div id="card-${id}" onmouseenter="cardMouseIn(${id}, '${anim}', true)" onmouseleave="cardMouseIn(${id}, '${anim}', false)" class="card">
+            <div class="img-wrap" style="background-color:${bcolor}">
+            <i class="${icon}"></i>
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">${title}</h5>
+            <p class="card-text">${desc}</p>
+            <a href="${url}" class="btn btn-primary" style="width:250px">Xem</a>
+            </div>
+        </div>
+        `});
+    itemWrap.innerHTML = cardsHtml.join('');
 }
 
 // for (const item of projectList) {
@@ -175,6 +185,25 @@ function cardMouseIn(id, animName, active){
     //     `
     //     index++;     
     // }
+
+// function renderItem(){
+//     let itemWrap = document.getElementsByClassName("card-wrap")[0];
+//     for (let i = 0; i < projectList.length; i++) {
+//         let { icon, title, desc, url, anim, id, bcolor } = projectList[i];
+//         let cardHtml = 
+//             `<div id="card-${id}" onmouseenter="cardMouseIn(${id}, '${anim}', true)" onmouseleave="cardMouseIn(${id}, '${anim}', false)" class="card">
+//                 <div class="img-wrap" style="background-color:${bcolor}">
+//                     <i class="${icon}"></i>
+//                 </div>
+//                 <div class="card-body">
+//                     <h5 class="card-title">${title}</h5>
+//                     <p class="card-text">${desc}</p>
+//                     <a href="${url}" class="btn btn-primary" style="width:250px">Xem</a>
+//                 </div>
+//             </div>`;
+//         itemWrap.innerHTML += cardHtml;
+//     }
+// }   
 
 
 

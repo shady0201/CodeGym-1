@@ -1,0 +1,26 @@
+@mixin navbar {
+    position: relative;
+    font-size: 1.2rem;
+    color: $white-color;
+    font-weight: 500;
+    margin-right: 3.0rem;
+}
+
+@mixin logo {
+    font-size: 2.0rem;
+    color: $main-color;
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+}
+
+@mixin navbarActive {
+    content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: -6px;
+        height: .1rem; 
+        background: $white-color;
+}
+

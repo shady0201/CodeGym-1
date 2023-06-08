@@ -6,6 +6,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 
 :root{
@@ -115,7 +116,7 @@ body{
 
 header .image-text .header-text{
    display: flex;
-   flex-direction: column;
+   flex-direction: column
 }
 
 .header-text .name{

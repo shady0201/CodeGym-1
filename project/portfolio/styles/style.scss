@@ -1,0 +1,248 @@
+$bg-color: #fdfdfd;
+$text-color: #333;
+$main-color: #754ef9;
+$white-color: #fdfdfd;
+$shadow-color: rgba(0, 0, 0, .2);
+
+@import 'header';
+@import 'mixinHeader';
+@import 'mixinBody';
+@import 'darkMode';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+   text-decoration: none; 
+   border: none;
+   outline: none;
+}
+
+html {
+    font-size: 80%;
+    overflow-x: hidden; 
+}
+
+body {
+    background: $bg-color;
+    color: $text-color;
+    text-rendering: optimizeSpeed;
+}
+
+.logo {
+  @include logo();
+}
+
+.navbar {
+    a {
+        @include navbar();
+    }
+}   
+
+.navbar {
+    a.active::before {
+        @include navbarActive();
+    }
+}
+
+section {
+    @include section();
+}
+
+.home {
+    @include home();
+}
+
+.home {
+    .home-content {
+        max-width: 50rem;
+    }
+}
+
+.home { 
+    h3 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        line-height: .3;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+    
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+.home-content {
+    .social-media {
+        a {
+         @include socialMedia();
+        }
+    }
+}
+
+.home-content {
+    .social-media {
+        a:hover {
+            background: $main-color;
+            color: $white-color;
+        }
+    }
+}
+
+.btn {
+    @include button();
+}
+
+.btn:hover {
+    @include buttonHover();
+}
+
+.home {
+    .profession-container {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background: transparent;
+        transform: translateY(-50%);
+        width: 800px;
+        height: 800px;
+        overflow: hidden;
+        pointer-events: none;
+    }
+}
+
+.home {
+    .profession-container {
+        .profession-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    }
+}
+
+.home {
+    .profession-box {
+        .profession {
+            position: absolute;
+            left: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color : $main-color;
+            transform: rotate(calc(360deg / 4 * var(--i)));
+            transform-origin: 400px;
+            padding: 13px 0;
+            background: $white-color;
+        }
+    }
+}
+
+.home {
+    .profession-box {
+        .profession:nth-child(1) {
+            margin-left: 55px;
+        }
+    }
+}
+.home {
+    .profession-box {
+        .profession:nth-child(2) {
+            margin-top: 135px;
+        }
+    }
+}
+
+.home {
+    .profession-box {
+        .profession:nth-child(3) {
+            margin-left: -65px;
+        }
+    }
+}
+
+.home {
+    .profession-box {
+        .profession:nth-child(4) {
+            margin-top: -135px;
+        }
+    }
+}
+
+.home {
+    .profession-box {
+        .profession:nth-child(2),
+        .profession:nth-child(4){
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.home {
+    .profession-box {
+        i {
+           font-size: 3.2rem;
+        }
+    }
+}
+
+.home {
+    .profession-box {
+        h3 {
+           font-size: 2.2rem;
+           line-height: 1;
+           font-weight: 600;
+        }
+    }
+}
+
+.home {
+    .profession-box {
+        .circle {
+           width: 450px;
+           height: 450px;
+           border: 3px solid $main-color;
+           border-radius: 50%;
+        }
+    }
+}
+
+.home {
+    .profession-container {
+        .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 400px solid $main-color;
+        border-right: 400px solid $main-color;
+        border-bottom: 400px solid $main-color;
+        border-left: 400px solid transparent;
+        }
+    }
+}
+
+.home-img {
+    img {
+        // position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        pointer-events: none;
+    }
+}

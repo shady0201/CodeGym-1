@@ -14,7 +14,6 @@ function saveCard(){
        code = codePart1 + codePart2 + codePart3 + codePart4;
        addCard(upperCaseFormattedClientName, code);
 
-       
 }
 
 function addCard(name, code){
@@ -94,13 +93,14 @@ function saveEditCard() {
 
 function showCard(){
     let itemWrap = document.getElementsByClassName("home-text")[0];
-    itemWrap.innerHTML = ''; 
-
     let cards = myLocal.getProducts();
-    for (let i = 0; i < cards.length; i++) {
-        let { name, code } = cards[i];
-        let cardHtml =
-            `<div class="container card-manager" style="background:#323271">
+    itemWrap.innerHTML = ''; 
+ 
+
+    let cardHtml = cards.map(function (card, i){
+        let { name, code } = card;
+        return `
+                <div class="container card-manager" style="background:#323271">
                 <i onclick="clickRemove('${code}')" class="fa-solid fa-xmark button-remove" ></i>
                 <i onclick="clickUpdate('${code}')" class="fa-solid fa-minus button-update"id=codeupdate-${i} data-bs-toggle="modal" data-bs-target="#modal-edit-product"></i>
                 <div class="card-head">
@@ -140,8 +140,8 @@ function showCard(){
                     </div>   
                 </div>
             </div>`;
-        itemWrap.innerHTML += cardHtml;
-    }
+    })
+    itemWrap.innerHTML = cardHtml.join('');
 }
 
 function clickRemove(code){
