@@ -13,7 +13,6 @@ let toggle = body.querySelector('.toggle');
 let searchSidebar = body.querySelector('.search-box');
 toggle.addEventListener('click', function() {
     sidebar.classList.toggle('close');
-    // console.log(sidebar.classList.contains('close'))
 });
 
 searchSidebar.addEventListener('click', function() {
