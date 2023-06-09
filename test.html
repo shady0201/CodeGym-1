@@ -4,67 +4,89 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body {
-            width: 50%;
-        }
+       .ads-one a:hover,
+.ads-two a:hover {
+    transition: var(--tran);
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
+}
 
-        .header {
-            width: 100%;
-            height: 50px;
-            border: 1px solid;
-        }
+.button-remove-one {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #e13737;
+    text-align: center;
+    line-height: 30px !important;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    left: calc(100% - 40px);
+    top: 135px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
 
-        .nav {
-            width: 100%;
-            height: 50px;
-            border: 1px solid;
-            margin-top: 5px;
-        }
+.button-remove-two {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #e13737;
+    text-align: center;
+    line-height: 30px !important;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    left: calc(100% - 40px);
+    top: 255px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
 
-        .body {
-            width: 100%;
-            height: 300px;
-            margin-top: 5px;
-        }
+.ads-one:hover .button-remove-one {
+   opacity: 1;
+}   
 
-        .left {
-            width: 60%;
-            height: 300px;
-            background: yellow;
-            float: left;
-        }
+.ads-two:hover .button-remove-two {
+   opacity: 1;
+}   
 
-        .top {
-            width: 100%;
-            height: 300px;
-            border: 1px solid;
-        }
-       
-        .right {
-            width: 40%;
-            height: 300px;
-            background: blue;
-            float: left;
-        }
-
-        .footer {
-            width: 100%;
-            height: 50px;
-            border: 1px solid;
-            margin-top: 5px;
-        }
+.button-remove-one:hover .ads-one {
+    transition: var(--tran);
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
+}
     </style>
 </head>
 <body>
-<div class="header"></div>
-<div class="nav"></div>
-<div class="body">
-    <div class="left">
-        <div class="top"></div>
-        <div class="bot"></div>
+    <div class="right-sidebar">
+        <h4>Được tài trợ</h4>
+        <div class="sidebar-ads">       
+            <div class="ads-one">
+                <i class="fa-solid fa-xmark button-remove-one"></i>
+                <a href="">
+                    <img src="./img/meo.png" alt="">      
+                    <div class="ads-title">
+                        <h5>Meo meo</h5>
+                        <span>meo.com</span>
+                    </div>
+                </a>
+            </div>
+           
+            <div class="ads-two">
+                <i class="fa-solid fa-xmark button-remove-two"></i>
+                <a href="">
+                    <img src="./img/shopee.png" alt="">
+                    <div class="ads-title">
+                        <h5>Shopee</h5>
+                        <span>shopee.vn</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="right"></div>
 </div>
-<div class="footer"></div>
 </body>
 </html>

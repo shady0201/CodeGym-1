@@ -8,23 +8,43 @@
     --tran: all 0.3s ease;
 }
 
-.menu-bar {
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 10px;
+    background: #edeff3;
+}
+
+.container .left-sidebar {
+    margin-top: 5px;
+    width: 17%;
+    height: 100vh;
+    /* background-color: red !important; */
+    padding: 10px 14px;
+}
+
+.container .main-content {
+    margin-top: 30px;
+    width: 60%;
+    height: 100vh;
+    /* background: blue; */
+}
+
+.container .right-sidebar {
+    margin-top: 30px;
+    width: 23%;
+    height: 100vh;
+    /* background: yellow; */
+}
+
+.top-content,
+.mid-content {
     margin-left: -10px;
 }
 
-.sidebar{
-    /* position: fixed;
-    top: 10;
-    left: 0; */
-    height: 100%;
-    width: 250px;
-    padding: 10px 14px;
-    /* background: var(--sidebar-color); */
-    transition: var(--tran);
-    z-index: 100;
-}
-
-.sidebar .text{
+.left-sidebar .text{
    font-size: 16px;
    font-weight: 500;
    color: black;
@@ -33,7 +53,7 @@
    opacity: 1;
 }
 
-.sidebar li{
+.left-sidebar li{
     height: 50px;
     /* margin-top: 10px; */
     list-style: none;
@@ -41,12 +61,12 @@
     align-items: center;  
 }
  
-.sidebar button{
+.left-sidebar button{
     margin-left: 15px;
 }
 
-.sidebar .icon{
-    color: blue;
+.left-sidebar .icon{
+    color: rgb(24, 118, 242);
     display: flex;
     align-items: center;  
     justify-content: center;
@@ -54,7 +74,7 @@
     min-width: 45px;
 }
 
-.sidebar a{
+.left-sidebar a{
     height: 100%;
     /* width: 100%; */
     text-decoration: none;
@@ -63,6 +83,11 @@
     align-items: center;  
     justify-content: left;
     transition: var(--tran);
+}
+
+.left-ava {
+    display: flex;
+    align-items: center;
 }
 
 .left-avatar {
@@ -152,20 +177,37 @@
     background: var(--primary-color);
 } */
 
-.sidebar li a:hover {
+.left-sidebar li a:hover {
     background: var(--primary-color);
 }
 
-.sidebar li a:hover .icon,
-.sidebar li a:hover .text {
+.left-sidebar li a:hover .icon,
+.left-sidebar li a:hover .text {
     color: var(--sidebar-color);
 }
 
 hr {
     width: 245px;
+    margin-top: 5px;
 }
 
 .mid-content li:nth-child(1),
 .bottom-content li:nth-child(1) {
     margin-top: 5px;
 }
+
+.select {
+    position: relative;
+}
+
+.select::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: -35px;
+    height: 5px;
+    background: rgb(24, 118, 242);
+    transform: rotate(90deg);
+    border-radius: 50px 50px 0px 0px;
+}
+

@@ -1,0 +1,143 @@
+.right-sidebar-ads h4 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.sidebar-ads img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.ads-one {
+    height: 100%;
+}
+
+.ads-two {
+    height: 100%;
+}
+
+.ads-one a{
+    height: 120px;
+    padding-left: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.ads-two a{
+    height: 120px;
+    padding-left: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.ads-one h5 {
+    color: black;
+    font-weight: 500;
+}
+
+.ads-two h5 {
+    color: black;
+    font-weight: 500;
+}
+
+.ads-title {
+    margin-left: 20px;
+}
+
+.ads-title span {
+    font-size: 10px;
+    color: rgb(162, 162, 154);
+}
+
+.ads-one a:hover,
+.ads-two a:hover {
+    transition: var(--tran);
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
+}
+
+.button-remove-one {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #e13737;
+    text-align: center;
+    line-height: 30px !important;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    left: calc(100% - 40px);
+    top: 135px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.button-remove-two {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #e13737;
+    text-align: center;
+    line-height: 30px !important;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    left: calc(100% - 40px);
+    top: 255px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.ads-one:hover .button-remove-one {
+   opacity: 1;
+}   
+
+.ads-two:hover .button-remove-two {
+   opacity: 1;
+}   
+
+/* .button-remove-one:hover + .ads-one a{
+    transition: var(--tran);
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
+} */
+
+.sidebar-birthday h4 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.birthday {
+    height: 36px;
+    width: 36px;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yX/r/rbQUMcxWjZR.png);
+    background-position: 0 0;
+    background-size: 36px 364px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.birthday-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.birthday-info p {
+    line-height: 20px;
+}
+
+.birthday-info a {
+    color: black;
+    font-weight: 600;
+}
