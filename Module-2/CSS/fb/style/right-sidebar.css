@@ -107,11 +107,10 @@
     box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
 } */
 
-.sidebar-birthday h4 {
+.rightbar-birthday h4 {
     font-weight: 600;
     font-size: 16px;
-    margin-top: 5px;
-    margin-left: 10px;
+    margin: 20px 0px 10px 10px;
 }
 
 .birthday {
@@ -140,4 +139,42 @@
 .birthday-info a {
     color: black;
     font-weight: 600;
+}
+
+.rightbar-contact {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.rightbar-icon {
+    margin-top: -7px;
+    margin-left: 100px;
+}
+
+.rightbar-contact h4 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.right-icon {
+    color: #707070;
+    font-size: 20px;
+}
+
+.rightbar-icon i:hover {
+    background: #754ef9;
+    color: #fdfdfd;
+}
+
+.rightbar-icon i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    transition: var(--tran)
 }
