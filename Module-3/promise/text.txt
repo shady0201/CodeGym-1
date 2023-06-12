@@ -1,0 +1,12 @@
+Promise :
+
+*Sinh ra từ phiên bản es6 để xử lý bất đồng bộ - callback hell đã tồn tại trước đó (viết code dài, nhìn khó hiểu…)
+
+* Để khai báo đối tượng mới dùng từ khoá new Promise() truyền vào 1 contructor Executor trong đó nhận được 2 tham số (resolve, reject) 
+      + res gọi khi thao tác xử lý thành công
+      + rej gọi khi thao tác xử lý thất bại
+
+*Khi đối tượng promise được tạo ra sử dụng các phương thức 
+      + then()  nhận callback function được thực thi khi res thành công (chú ý là ta có thể .then() nhiều lần )
+      + catch() nhận callback function được thực thi khi rej 
+      + finally() nhận callback function được thực thi khi res & rejx   

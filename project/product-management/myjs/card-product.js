@@ -97,10 +97,10 @@ function showCard(){
     itemWrap.innerHTML = ''; 
  
 
-    let cardHtml = cards.map(function (card, i){
+    let cardHtml = cards.map((card, i) => {
         let { name, code } = card;
         return `
-                <div class="container card-manager" style="background:#323271">
+            <div class="container card-manager" style="background:#323271">
                 <i onclick="clickRemove('${code}')" class="fa-solid fa-xmark button-remove" ></i>
                 <i onclick="clickUpdate('${code}')" class="fa-solid fa-minus button-update"id=codeupdate-${i} data-bs-toggle="modal" data-bs-target="#modal-edit-product"></i>
                 <div class="card-head">
