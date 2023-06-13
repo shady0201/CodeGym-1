@@ -12,10 +12,12 @@
 }
 
 .ads-one {
+    position: relative;
     height: 100%;
 }
 
 .ads-two {
+    position: relative;
     height: 100%;
 }
 
@@ -24,6 +26,8 @@
     padding-left: 7px;
     display: flex;
     align-items: center;
+    transition: var(--tran);
+    border-radius: 10px;
 }
 
 .ads-two a{
@@ -31,6 +35,8 @@
     padding-left: 7px;
     display: flex;
     align-items: center;
+    transition: var(--tran);
+    border-radius: 10px;
 }
 
 .ads-one h5 {
@@ -54,13 +60,11 @@
 
 .ads-one a:hover,
 .ads-two a:hover {
-    transition: var(--tran);
     background: var(--primary-color);
-    border-radius: 10px;
     box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
 }
 
-.button-remove-one {
+.button-remove {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -71,41 +75,22 @@
     border-radius: 30px;
     cursor: pointer;
     left: calc(100% - 40px);
-    top: 135px;
+    top: 10px;
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
 
-.button-remove-two {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: #e13737;
-    text-align: center;
-    line-height: 30px !important;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    left: calc(100% - 40px);
-    top: 255px;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
+.button-remove:hover {
+   box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
 }
 
-.ads-one:hover .button-remove-one {
+.ads-one:hover .button-remove {
    opacity: 1;
 }   
 
-.ads-two:hover .button-remove-two {
+.ads-two:hover .button-remove {
    opacity: 1;
 }   
-
-/* .button-remove-one:hover + .ads-one a{
-    transition: var(--tran);
-    background: var(--primary-color);
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
-} */
 
 .rightbar-birthday h4 {
     font-weight: 600;
@@ -144,7 +129,7 @@
 .rightbar-contact {
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 20px;
     margin-left: 10px;
 }
@@ -178,3 +163,59 @@
     border-radius: 50%;
     transition: var(--tran)
 }
+
+.online-list {
+    position: relative;
+    margin-top: 10px;
+    transition: var(--tran);        
+    border-radius: 6px;
+}
+
+.avatar-contact {
+    position: relative;
+    margin-top: 27px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    /* border: 0.1rem solid #dfdaec; */
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+}
+
+.online-list::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #41db51;
+    position: absolute;
+    bottom: 5px;
+    left: 35px;
+}   
+
+.online-list a {
+    display:flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    height: 50px;
+}
+
+.online-list:hover {
+    background: #DADDE1;
+}
+
+.online-list .name-contact {
+    margin: 20px 0px 0px 20px;
+}
+
+.name-contact h5 {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+

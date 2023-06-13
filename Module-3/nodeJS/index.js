@@ -41,7 +41,7 @@ let axios = require('axios');
 axios.get('http://localhost:3000/students/1')
     .then((x) => {
         let student = x.data
-        console.log(student);
+        console.log(student);x  
     });
 
 axios.get('http://localhost:3000/students/2')
