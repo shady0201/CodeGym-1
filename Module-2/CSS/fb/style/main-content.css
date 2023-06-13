@@ -5,15 +5,16 @@
     margin-left: 30px;
     border-radius: 15px;
     overflow: hidden;
-    border: 0.1rem solid #dfdaec;
+    border: 1px solid #dfdaec;
 }
 
 .top-content {
     margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     min-height: 50px;
     display: flex;
     align-items: center;
-    padding: 10px;
     border-bottom: 1px solid #DADDE1;
 }
 
@@ -26,10 +27,10 @@
 }
 
 .top-select::after {
-    content: "";
+    content: "";    
     position: absolute;
     width: 100%;
-    bottom: -10px;
+    bottom: -5px;
     left: 0;
     height: 3.5px;
     background: rgb(24, 118, 242);
@@ -41,22 +42,87 @@
 
 .left-top-content {
     width: 50%;
+    height: 50px;
     text-align: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: -5px;
+}
+
+.right-top-content {
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    transition: var(--tran);
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: -5px;
 }
 
 .left-top-content i,
 .right-top-content i {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;   
+    margin-top: 3px;
 }
 
-.right-top-content {
-    width: 50%;
-    text-align: center;
+.right-top-content:hover {
+    background: #DADDE1;
 }
 
 .header-content span {
     font-size: 20px;
     padding-left: 5px;
+}
+
+.body-content {
+    padding: 10px;
+}
+
+.story {
+   flex-basis: 18%;
+   padding-top: 37.5%;
+   padding-left: 25%;
+   position: relative;
+   background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("./../img/avatar-main.jpg");
+   background-position: center;
+   background-size: cover;
+   border-radius: 10px;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   transition: var(--tran);
+}
+
+.story img {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    border-radius: 5px solid #626262;
+}
+
+.story h6 {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.story-galley {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.story:hover {
+    background: linear-gradient(#a4a4a45f, rgba(0,0,0,0.1)), url("./../img/avatar-main.jpg");
+    background-position: center;
+    background-size: cover;
 }
