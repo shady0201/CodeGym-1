@@ -199,7 +199,7 @@
 .online-list a {
     display:flex;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     padding-left: 10px;
     height: 50px;
 }
@@ -209,7 +209,7 @@
 }
 
 .online-list .name-contact {
-    margin: 20px 0px 0px 20px;
+    margin: 35px 0px 0px 20px;
 }
 
 .name-contact h5 {
