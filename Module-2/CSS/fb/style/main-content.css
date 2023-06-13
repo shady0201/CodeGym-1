@@ -81,20 +81,6 @@
     padding: 10px;
 }
 
-.story {
-   flex-basis: 18%;
-   padding-top: 37.5%;
-   padding-left: 25%;
-   position: relative;
-   background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("./../img/avatar-main.jpg");
-   background-position: center;
-   background-size: cover;
-   border-radius: 10px;
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-   cursor: pointer;
-   transition: var(--tran);
-}
-
 .story img {
     position: absolute;
     width: 35px;
@@ -125,4 +111,60 @@
     background: linear-gradient(#a4a4a45f, rgba(0,0,0,0.1)), url("./../img/avatar-main.jpg");
     background-position: center;
     background-size: cover;
+}
+
+.story {
+    flex-basis: 18%;
+    padding-top: 37.5%;
+    padding-left: 24%;
+    position: relative;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("./../img/avatar-main.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: var(--tran);
+ }
+ 
+.story-one {
+    flex-basis: 18%;
+    padding-top: 37.5%;
+    padding-left: 24%;
+    position: relative;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("./../img/advertisement.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: var(--tran);
+}
+
+.story-two {
+    flex-basis: 18%;
+    padding-top: 37.5%;
+    padding-left: 24%;
+    position: relative;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("./../img/feed-image-1.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: var(--tran);
+}
+
+.story-three {
+    flex-basis: 18%;
+    padding-top: 37.5%;
+    padding-left: 24%;
+    position: relative;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("./../img/cover.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: var(--tran);
 }
