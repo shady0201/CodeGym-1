@@ -5,7 +5,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     outline: none;
-    text-decoration: none;
+    text-decoration: none !important;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ body {
     max-height: 100vh;
 }
 
-.nav {
+.fb-nav {
     display: flex;
     justify-content: space-between;
     padding-top : 15px;

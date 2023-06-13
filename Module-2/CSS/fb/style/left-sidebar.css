@@ -3,6 +3,10 @@
     margin-left: -10px;
 }
 
+.fb-container ul {
+    padding-left: 0px !important
+}
+
 .left-sidebar .text{
    font-size: 16px;
    font-weight: 500;

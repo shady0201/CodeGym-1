@@ -8,7 +8,7 @@
     --tran: all 0.3s ease;
 }
 
-.container {
+.fb-container {
     width: 100%;
     height: 100vh;
     position: relative;
@@ -18,20 +18,20 @@
     background: #edeff3;
 }
 
-.container .left-sidebar {
+.fb-container .left-sidebar {
     margin-top: 5px;
     width: 17%;
     height: 1000px;
     padding: 10px 14px;
 }
 
-.container .main-content {
+.fb-container .main-content {
     margin-top: 25px;
     width: 60%;
     height: 1000px;
 }
 
-.container .right-sidebar {
+.fb-container .right-sidebar {
     margin-top: 25px;
     width: 23%;
     height: 1000px;
