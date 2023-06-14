@@ -18,39 +18,68 @@
     align-items: center;
 }
 
-.name {
+.name, .phone, .email {
+    padding: 5px;
     margin-left: -3px;
 }
 
-.phone {
-    margin-left: -74px;
-}
-
-.name, .phone, .email {
-    padding: 5px;
-}
-
-.name span {
-    padding-right: 10px;
-}
-
-.phone span {
-    padding-right: 10px;
-}
-
-.email span {
-    padding-right: 10px;
+.phone, .email {
+    margin-bottom: -5px;
 }
 
 input {
+    width: 280px;
     border: 1px solid #DADDE1;
 }
 
 .contact button {
-    margin-left: 200px;
+    margin-left: 220px;
+    margin-top: 10px;
     padding: 0px 5px 2px 5px;
 }
 
 .contact button span {
     font-size: 12px;
+}
+
+.form-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-email {
+    display: flex;
+    flex-direction: column;
+}
+
+.invalid{
+    color: red;
+    font-style: italic;
+}
+  
+.border-invalid{
+    border: 1px solid red;
+    background-color: #d0d7e052;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    padding-left: 5px;
+}
+
+.footerNew {
+    position: fixed;
+    background: #363844;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 15px 0px 3px 0px;
+    letter-spacing: 0.1px;
+    width: 100%;
+    bottom: 0;
 }
