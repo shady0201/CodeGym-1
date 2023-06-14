@@ -46,7 +46,7 @@
     transition: var(--tran);
 }
 
-/* .left-ava {
+.left-ava {
     display: flex;
     align-items: center;
 }
@@ -61,7 +61,7 @@
     background-image: url('../img/avatar.jpg');
     background-size: cover;
     background-position: center;
-} */
+}
 
 .watch {
     background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/k0KA7vAWVRx.png);
@@ -131,7 +131,7 @@
 }
 
 .nav-text {
-    width: 200px;
+    width: 90px;
 }
 
 .left-sidebar li a:hover {

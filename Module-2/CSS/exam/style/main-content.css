@@ -1,0 +1,56 @@
+.mid-content {
+    margin-top: -7px;
+    padding: 0px 30px 0px 100px;
+}
+
+.title {
+    padding-bottom: 20px;
+}
+
+.mid p:nth-child(1) {
+    padding-bottom: 20px
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    margin-left: -3px;
+}
+
+.phone {
+    margin-left: -74px;
+}
+
+.name, .phone, .email {
+    padding: 5px;
+}
+
+.name span {
+    padding-right: 10px;
+}
+
+.phone span {
+    padding-right: 10px;
+}
+
+.email span {
+    padding-right: 10px;
+}
+
+input {
+    border: 1px solid #DADDE1;
+}
+
+.contact button {
+    margin-left: 200px;
+    padding: 0px 5px 2px 5px;
+}
+
+.contact button span {
+    font-size: 12px;
+}
