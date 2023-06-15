@@ -61,32 +61,30 @@
     </style>
 </head>
 <body>
-    <div class="right-sidebar">
-        <h4>Được tài trợ</h4>
-        <div class="sidebar-ads">       
-            <div class="ads-one">
-                <i class="fa-solid fa-xmark button-remove-one"></i>
-                <a href="">
-                    <img src="./img/meo.png" alt="">      
-                    <div class="ads-title">
-                        <h5>Meo meo</h5>
-                        <span>meo.com</span>
-                    </div>
-                </a>
-            </div>
-           
-            <div class="ads-two">
-                <i class="fa-solid fa-xmark button-remove-two"></i>
-                <a href="">
-                    <img src="./img/shopee.png" alt="">
-                    <div class="ads-title">
-                        <h5>Shopee</h5>
-                        <span>shopee.vn</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </form>
+        <script>
+            let emailInput = document.getElementById('email');
+
+            function validateEmail(email) {
+                var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                return regex.test(email) ? true : false;
+            }
+
+            function submitForm() {
+                if (!validateEmail(emailInput.value)) {
+                    alert('Email không hợp lệ');
+                    return;
+                }
+            }
+
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                submitForm();
+            });
+        </script>
 </body>
 </html>

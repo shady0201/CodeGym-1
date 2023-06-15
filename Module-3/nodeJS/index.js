@@ -29,7 +29,6 @@
 //     }
 // })
 
-let axios = require('axios');
 // axios.get('http://localhost:3000/students')
 //     .then((x) => {
 //         let data = x.data
@@ -38,16 +37,6 @@ let axios = require('axios');
 //         console.log(scoreHigherThanSix);
 //     });
 
-axios.get('http://localhost:3000/students/1')
-    .then((x) => {
-        let student = x.data
-        console.log(student);x  
-    });
 
-axios.get('http://localhost:3000/students/2')
-    .then((x) => {
-        let student = x.data
-        console.log(student);
-    });
 
 

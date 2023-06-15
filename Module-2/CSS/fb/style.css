@@ -36,3 +36,15 @@
     width: 23%;
     height: 1000px;
 }
+
+/* Tooltip */
+
+.arrow {
+    margin-top: 5px;
+}
+
+.tooltip-inner {
+    margin-top: 5px;
+    font-size: smaller;
+    padding: 5px !important;
+}
