@@ -113,6 +113,24 @@
     background-size: cover;
 }
 
+.story-one:hover {
+    background: linear-gradient(#a4a4a45f, rgba(0,0,0,0.1)), url("./../img/advertisement.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.story-two:hover {
+    background: linear-gradient(#a4a4a45f, rgba(0,0,0,0.1)), url("./../img/feed-image-1.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.story-three:hover {
+    background: linear-gradient(#a4a4a45f, rgba(0,0,0,0.1)), url("./../img/cover.png");
+    background-position: center;
+    background-size: cover;
+}
+
 .story {
     flex-basis: 18%;
     padding-top: 37.5%;
